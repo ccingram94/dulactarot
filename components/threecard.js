@@ -59,7 +59,7 @@ export default function ThreeCard() {
                   </p>
                   <motion.div className="flex flex-row flex-wrap justify-center" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
                         <div className=" max-w-xs p-12" >
-                          <h2>Past</h2>
+                          <h2 className="font-montserrat">Past</h2>
                           <Image src={back} className="rounded-xl" />
                         </div>
                         <div className=" max-w-xs p-12">
