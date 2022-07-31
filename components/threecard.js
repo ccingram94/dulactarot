@@ -3,18 +3,28 @@ import Image from 'next/image'
 import back from '../public/back.png'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useSelector, useDispatch } from 'react-redux'
+import { assignCard1, assignCard2, assignCard3 } from '../cardSlice'
 
 export default function ThreeCard() {
-  const [card1, setCard1] = useState(null);
-  const [card2, setCard2] = useState(null);
-  const [card3, setCard3] = useState(null);
+  const card1 = useSelector((state) => state.counter.card1);
+  const card2 = useSelector((state) => state.counter.card2);
+  const card3 = useSelector((state) => state.counter.card3);
+  const dispatch = useDispatch()
   const [cardsDealt, setCardsDealt] = useState(false);
   
   function dealCards() {
     setCardsDealt(true);
-    setCard1(Math.floor(Math.random() * 23));
-    setCard2(Math.floor(Math.random() * 23));
-    setCard3(Math.floor(Math.random() * 23));
+    assignCards();
+  }
+
+  function assignCards () {
+    const result1 = Math.floor(Math.random() * 79)
+    const result2 = Math.floor(Math.random() * 79)
+    const result3 = Math.floor(Math.random() * 79)
+    dispatch(assignCard1(result1));
+    dispatch(assignCard2(result2));
+    dispatch(assignCard3(result3));
   }
 
   return (
@@ -30,6 +40,7 @@ export default function ThreeCard() {
                     <Image src={back} className="rounded-xl bg-yellow-300"/>
                   </div>
                   <p>click the deck to deal your cards</p>
+                  <p>card 1 is currently {card1}</p>
                 </motion.div>
                 }
               </div>
@@ -37,6 +48,15 @@ export default function ThreeCard() {
                 {cardsDealt && 
                 <div>
                   <h2 className="text-center">click to reveal your cards</h2>
+                  <p>
+                    Card 1 is {card1}
+                  </p>
+                  <p>
+                    Card 2 is {card2}
+                  </p>
+                  <p>
+                    Card 3 is {card3}
+                  </p>
                   <motion.div className="flex flex-row flex-wrap justify-center" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
                         <div className=" max-w-xs p-12" >
                           <h2>Past</h2>
