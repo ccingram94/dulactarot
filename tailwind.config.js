@@ -9,6 +9,9 @@ module.exports = {
       'montserrat': ['Montserrat', 'sans-serif'],
       'bebas': ['Bebas Neue', 'sans-serif']
     },
+    backgroundImage: {
+      'banner': "url('/banner.png')",
+    },
     extend: {},
   },
   plugins: [],
