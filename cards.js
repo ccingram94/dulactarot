@@ -4,6 +4,7 @@ export const cards = [
         id: 0,
         name: 'The Fool',
         description: 'The Fool tarot card is all about new beginnings, innocence, and adventure. It predicts that the future will be full of new opportunities and experiences. The Fool also suggests that now is the time to take a chance and follow your dreams.',
+        image: "https://d2lc40okpdverw.cloudfront.net/fool.png",
     },
     {
         id: 1,

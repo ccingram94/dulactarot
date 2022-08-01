@@ -69,15 +69,15 @@ export default function ThreeCard() {
                   <motion.div className="flex flex-row flex-wrap justify-center" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
                         <div className="max-w-xs p-12" onClick={ () => setCard1Flip(true) } >
                           {!card1flip &&
-                            <div>
+                            <div className="max-w-sx">
                               <h2 className="text-xl p-2">Past</h2>
-                              <Image src={back} className="rounded-xl" />
+                              <Image src={back} className="rounded-xl" width="300" height="500"/>
                             </div>
                           }
                           {card1flip &&
-                            <div>
+                            <div className="max-w-xs">
                               <h2 className="text-xl p-2">Past</h2>
-                              <Image src={back} className="rounded-xl" />
+                              <Image src={ cards[0].image } width="300" height="500" className="rounded-xl" />
                               <p className="text-xl p-2 text-yellow-500">{ cards[card1].name}</p>
                               <p className="text-md p-2 text-yellow-600"> { cards[card1].description } </p>
                             </div>
@@ -87,13 +87,13 @@ export default function ThreeCard() {
                           {!card2flip &&
                             <div>
                               <h2 className="text-xl p-2">Past</h2>
-                              <Image src={back} className="rounded-xl" />
+                              <Image src={back} className="rounded-xl" width="300" height="500" />
                             </div>
                           }
                           {card2flip &&
                             <div>
                               <h2 className="text-xl p-2">Past</h2>
-                              <Image src={back} className="rounded-xl" />
+                              <Image src={ cards[0].image } width="300" height="500" className="rounded-xl" />
                               <div>
                                 <p className="text-xl p-2 text-yellow-500">{ cards[card2].name}</p>
                                 <p className="text-md p-2 text-yellow-600"> { cards[card2].description } </p>
@@ -105,13 +105,13 @@ export default function ThreeCard() {
                           {!card3flip &&
                             <div>
                               <h2 className="text-xl p-2">Past</h2>
-                              <Image src={back} className="rounded-xl" />
+                              <Image src={back} className="rounded-xl" width="300" height="500" />
                             </div>
                           }
                           {card3flip &&
                             <div>
                               <h2 className="text-xl p-2">Past</h2>
-                              <Image src={back} className="rounded-xl" />
+                              <Image src={ cards[0].image } width="300" height="500" className="rounded-xl" />
                               <p className="text-xl p-2 text-yellow-500">{ cards[card3].name}</p>
                               <p className="text-md p-2 text-yellow-600"> { cards[card3].description } </p>
                             </div>
