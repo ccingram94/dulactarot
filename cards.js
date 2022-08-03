@@ -64,7 +64,7 @@ export const cards = [
         id: 10,
         name: 'The Wheel of Fortune',
         description: 'Change, new beginnings, and the cyclical nature of life. It is a reminder that nothing stays the same forever, and that good fortune and bad fortune are both part of the human experience. The Wheel of Fortune is a reminder to stay flexible and open to change, as it is the only constant in life.',
-        image: "https://d2lc40okpdverw.cloudfront.net/wheeloffortune.png",
+        image: "https://d2lc40okpdverw.cloudfront.net/wheel.png",
      },
     {
         id: 11,
@@ -532,7 +532,7 @@ export const cards = [
         id: 88,
         name: 'The Wheel of Fortune, reversed',
         description: 'Bad luck or setbacks.  But not forever -- if you are patient and persevere, the good times will return.',
-        image: "https://d2lc40okpdverw.cloudfront.net/wheeloffortuner.png",
+        image: "https://d2lc40okpdverw.cloudfront.net/wheelr.png",
      },
     {
         id: 89,

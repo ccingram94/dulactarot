@@ -38,7 +38,7 @@ export default function ThreeCard() {
 
   return (
     <div className="bg-black">
-      <div className="w-screen bg-black flex flex-col flex-wrap justify-center items-center pt-10">
+      <div className="w-screen min-h-screen bg-teal-900 flex flex-col flex-wrap justify-center items-center pt-10">
         
           <AnimatePresence>
             <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5}}>

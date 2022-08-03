@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    card1: null,
-    card2: null,
-    card3: null,
+    card1: 1,
+    card2: 1,
+    card3: 1,
 }
 
 export const cardSlice = createSlice({
