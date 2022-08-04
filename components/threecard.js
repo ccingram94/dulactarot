@@ -84,10 +84,10 @@ export default function ThreeCard() {
                 <div>
                   <div className="flex flex-row flex-wrap justify-center p-2">
                     <div className="p-2">
-                      <button onClick={() => setCardsDealt(false)} className="p-2 rounded-xl text-lg md:text-xl  opacity-50 hover:opacity-90 transition-all">New Reading</button>
+                      <button onClick={() => setCardsDealt(false)} className="p-2 rounded-xl text-lg md:text-xl  opacity-40 hover:opacity-90 hover:text-teal-900 hover:bg-white hover:bg-opacity-30 transition-all">New Reading</button>
                     </div>
                     <div className="p-2">
-                      <button className="p-2 rounded-xl text-lg md:text-xl  opacity-50 hover:opacity-90 transition-all">Save Reading</button>
+                      <button className="p-2 rounded-xl text-lg md:text-xl  opacity-40 hover:opacity-90 hover:text-teal-900 hover:bg-white hover:bg-opacity-30 transition-all">Save Reading</button>
                     </div>
                   </div>
                   <motion.div className="flex flex-row flex-wrap justify-center min-h-screen" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
