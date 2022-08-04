@@ -47,7 +47,7 @@ export default function CID() {
         <main className="bg-teal-900 text-white font-montserrat">
           <div>
             <div className="flex flex-row flex-wrap justify-center p-6 lg:p-12">
-              <div className="p-6">
+              <div className="p-6 flex flex-col justify-center">
                 {!id && <p>loading...</p>}
                 {id && 
                   <Image src={ cards[id].image } height="500" width="300" className="rounded-xl"/>
@@ -58,17 +58,24 @@ export default function CID() {
                 {id &&
                 <div>
                   <div className="">
-                    <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">{ cards[id].name }</h2>
+                    <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2">{ cards[id].name }</h2>
                     <p className="text-xl text-center max-w-xs">{ cards[id].description }</p>
                   </div>
                   <div>
                     <h2 className="text-2xl lg:text-4xl font-bebas text-center p-2 pt-12">Reversed</h2>
                     <p className="text-xl text-center max-w-xs">{ cards[reverseid].description }</p>
                   </div>
+                  <div>
+                    <h2 className="text-xl lg:text-2xl font-bebas text-center p-2 pt-12">YES/NO</h2>
+                    <div>
+                      <p className="text-xl text-center max-w-xs">Upright: { cards[id].yesno }</p>
+                      <p className="text-xl text-center max-w-xs">Reversed: { cards[reverseid].yesno }</p>
+                    </div>
+                  </div>
                 </div>
                 }
               </div>
-          </div>
+            </div>
           </div>
           <div className="bg-black">
             <div className="p-6 flex justify-center">
