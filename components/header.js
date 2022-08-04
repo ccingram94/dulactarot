@@ -18,7 +18,9 @@ export default function Header() {
               <Link href="/meanings">
                 <p className="text-2xl p-2">Meanings</p>
               </Link>
+              <Link href="/readings">
                 <p className="text-2xl p-2">Readings</p>
+              </Link>
               <Link href="/journal">
                 <p className="text-2xl p-2">Journal</p>
               </Link>
