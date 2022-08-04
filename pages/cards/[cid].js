@@ -29,7 +29,7 @@ export default function CID() {
                 {!id && <p>loading...</p>}
                 {id &&
                 <div>
-                  <div>
+                  <div className="">
                     <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">{ cards[id].name }</h2>
                     <p className="text-xl text-center max-w-xs">{ cards[id].description }</p>
                   </div>
@@ -38,6 +38,23 @@ export default function CID() {
                     <p className="text-xl text-center max-w-xs">{ cards[reverseid].description }</p>
                   </div>
                 </div>
+                }
+              </div>
+          </div>
+          <div className="bg-black">
+          <div className="p-6 flex justify-center">
+                {!id && <p>loading...</p>}
+                {id && 
+                  <div className="flex flex-col align-center justify-center">
+                    <h2 className="text-4xl text-teal-600 lg:text-6xl font-bebas text-center p-2 pt-12">The Meaning of { cards[id].name}</h2>
+                    <div className="flex max-w-3xl text-center justify-center p-6 pt-12 rounded-xl bg-opacity-30">
+                      <div className="flex justify-center">
+                        <p className="text-xl text-teal-800">
+                          { cards[id].longdescription }
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 }
               </div>
           </div>

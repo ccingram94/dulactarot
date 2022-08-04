@@ -11,13 +11,13 @@ export const cardSlice = createSlice({
     initialState,
     reducers: {
         assignCard1: (state, action) => {
-            state.card1 += action.payload
+            state.card1 = action.payload
         },
         assignCard2: (state, action) => {
-            state.card2 += action.payload
+            state.card2 = action.payload
         },
         assignCard3: (state, action) => {
-            state.card3 += action.payload
+            state.card3 = action.payload
         },
     },
 })

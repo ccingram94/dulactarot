@@ -2,43 +2,65 @@ import Head from 'next/head'
 import Image from 'next/image'
 import back from '../public/back.png'
 import { cards } from '../cards.js'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useSelector, useDispatch } from 'react-redux'
 import { assignCard1, assignCard2, assignCard3 } from '../cardSlice'
 
 export default function ThreeCard() {
+  //initiate redux store stuff and all card states
+  const dispatch = useDispatch()
   var card1 = useSelector((state) => state.counter.card1);
   var card2 = useSelector((state) => state.counter.card2);
   var card3 = useSelector((state) => state.counter.card3);
-  const dispatch = useDispatch()
   const [cardsDealt, setCardsDealt] = useState(false);
-
   const [ card1flip, setCard1Flip ] = useState(false);
   const [ card2flip, setCard2Flip ] = useState(false);
   const [ card3flip, setCard3Flip ] = useState(false);
-
-  const [ meaning1, setMeaning1 ] = useState(false);
-  const [ meaning2, setMeaning2 ] = useState(false);
-  const [ meaning3, setMeaning3 ] = useState(false);
+  //made results global variables, were previously local and unreachable
+  var result1 
+  var result2 
+  var result3 
   
   function dealCards() {
     setCardsDealt(true);
-    assignCards();
   }
 
-  function assignCards () {
-    var result1 = Math.floor(Math.random() * 156)
-    var result2 = Math.floor(Math.random() * 156)
-    var result3 = Math.floor(Math.random() * 156)
+  function resetCards() {
+    setCardsDealt(false);
+  }
+
+  useEffect(() => {
+    setCard1Flip(false);
+    setCard2Flip(false);
+    setCard3Flip(false);
+
+    //generate cards
+    result1 = Math.floor(Math.random() * 156)
+    result2 = Math.floor(Math.random() * 156)
+    result3 = Math.floor(Math.random() * 156)
+
+    //while loops for data validation so no card pulled more than once
+    while (result2 == result1) {
+      result2 = Math.floor(Math.random() * 156)
+    }
+    while (result3 == result2 || result3 == result1) {
+      result3 = Math.floor(Math.random() * 156)
+    }
+    
+    //update Redux store
     dispatch(assignCard1(result1));
     dispatch(assignCard2(result2));
     dispatch(assignCard3(result3));
-  }
+
+    //i am a simpleton who needs the console to assure me have mercy
+    console.log(result1, result2, result3)
+  }, [cardsDealt])
+
 
   return (
     <div className="bg-black">
-      <div className="w-screen min-h-screen bg-teal-900 flex flex-col flex-wrap justify-center items-center pt-10">
+      <div className="w-screen min-h-full bg-teal-900 flex flex-col flex-wrap justify-center items-center pt-10">
         
           <AnimatePresence>
             <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5}}>
@@ -60,6 +82,14 @@ export default function ThreeCard() {
               <div>
                 {cardsDealt && 
                 <div>
+                  <div className="flex flex-row flex-wrap justify-center p-2">
+                    <div className="p-2">
+                      <button onClick={() => setCardsDealt(false)} className="p-2 rounded-xl text-lg md:text-xl  opacity-50 hover:opacity-90 transition-all">New Reading</button>
+                    </div>
+                    <div className="p-2">
+                      <button className="p-2 rounded-xl text-lg md:text-xl  opacity-50 hover:opacity-90 transition-all">Save Reading</button>
+                    </div>
+                  </div>
                   <motion.div className="flex flex-row flex-wrap justify-center min-h-screen" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
                         <div className="max-w-xs p-12" onClick={ () => setCard1Flip(true) } >
                           {!card1flip &&
