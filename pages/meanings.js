@@ -12,9 +12,9 @@ export default function Meanings() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="bg-teal-900                                                                                                                                                                         text-white font-montserrat">
+      <main className="bg-yellow-200 text-black font-montserrat">
         <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">Tarot Card Meanings</h2>
-        <p className="text-xl text-center ">the ancient art revealed</p>
+        <p className="text-xl text-center pb-6">the ancient art revealed</p>
         <AllCardMeanings />
       </main>
     </div>

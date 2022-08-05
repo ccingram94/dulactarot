@@ -12,18 +12,11 @@ export default function Journal() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="bg-teal-900                                                                                                                                                                         text-white font-montserrat">
+      <main className="bg-yellow-200 min-h-screen text-black font-montserrat">
         <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">My Tarot Journal</h2>
-        <p className="text-xl text-center ">your story, written in the stars</p>
+        <p className="text-xl text-center pb-6">your story, written in the stars</p>
         <div className="flex flex-row flex-wrap">
-          <div className="bg-black">
-            <h3>New Reading</h3>
-            <p>Start a new reading and save the results to your journal!</p>
-          </div>
-          <div className="bg-black">
-            <h3>Enter a Reading</h3>
-            <p>Used your own cards?  Just enter them here to instantly find the meanings and save your reading to your journal.</p>
-          </div>
+          <h2>hello world</h2>
         </div>
       </main>
     </div>
