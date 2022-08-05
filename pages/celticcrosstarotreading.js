@@ -2,8 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/header'
 import YesNoReading from '../components/yesnoreading'
+import CelticCross from '../components/celticcross'
 
-export default function YesNoTarotReading() {
+export default function CelticCrossTarotReading() {
     return (
       <div>
         <Head>
@@ -13,7 +14,7 @@ export default function YesNoTarotReading() {
         </Head>
         <Header />
         <main>
-            <YesNoReading />
+            <CelticCross />
         </main>
       </div>
     )

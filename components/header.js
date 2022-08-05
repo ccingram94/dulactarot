@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <div>
         <div className="w-screen bg-teal-900">
-            <p className="p-2 font-montserrat text-blue-200 text-center"> ✨ tarot readings with AI artwork inspired by fairytale illustrator Edmund Dulac ✨ </p>
+            <p className="p-2 font-montserrat text-blue-200 text-center"> ✨ tarot readings with artwork inspired by fairytale illustrator Edmund Dulac ✨ </p>
         </div>
         <div className="flex flex-row flex-wrap w-screen text-center justify-center bg-banner bg-cover bg-bottom">
           <div className="flex flex-col lg:flex-row text-center justify-between items-center w-screen bg-teal-900 bg-opacity-90 pt-6">

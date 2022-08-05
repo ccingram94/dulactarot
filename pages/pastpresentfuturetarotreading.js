@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/header'
-import YesNoReading from '../components/yesnoreading'
+import ThreeCardReading from '../components/threecard'
 
-export default function YesNoTarotReading() {
+export default function PastPresentFutureTarotReading() {
     return (
       <div>
         <Head>
@@ -13,7 +13,7 @@ export default function YesNoTarotReading() {
         </Head>
         <Header />
         <main>
-            <YesNoReading />
+            <ThreeCardReading />
         </main>
       </div>
     )

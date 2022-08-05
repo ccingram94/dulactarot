@@ -73,7 +73,7 @@ export default function YesNoReading() {
                         <div className="max-w-xs p-12" onClick={ () => setCard1Flip(true) } >
                           {!card1flip &&
                             <motion.div className="max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
-                              <h2 className="font-bebas text-center text-xl p-2">Yes/No</h2>
+                              <h2 className="text-xl lg:text-3xl p-2 font-bebas text-white text-center">Yes/No</h2>
                               <div className="rounded-xl bg-yellow-300 hover:shadow-2xl hover:shadow-yellow-300 transition-all ease-linear">
                                 <Image src={back} className="rounded-xl" width="300" height="500"/>
                               </div>
@@ -82,10 +82,11 @@ export default function YesNoReading() {
                           {card1flip &&
                             <motion.div className="max-w-xs " initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
                                 <div>
-                                    <h2 className="text-xl p-2 text-center font-bebas">Yes/No</h2>
+                                    <h2 className="text-xl lg:text-3xl p-2 font-bebas text-white text-center">Yes/No</h2>
                                     <Image src={ cards[card1].image } width="300" height="500" className="rounded-xl" />
-                                    <p className="text-xl p-2 text-yellow-500">{ cards[card1].name}</p>
-                                    <p className="text-md p-2 text-yellow-600"> { cards[card1].description } </p>
+                                    <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card1].name}</p>
+                                    <p className="text-md p-2 text-yellow-100 text-center"> { cards[card1].description } </p>
+                                    <p className="text-md p-2 text-yellow-100 text-center">Verdict: { cards[card1].yesno } </p>
                                 </div>
                             </motion.div>
                           }

@@ -94,7 +94,7 @@ export default function ThreeCard() {
                         <div className="max-w-xs p-12" onClick={ () => setCard1Flip(true) } >
                           {!card1flip &&
                             <motion.div className="max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
-                              <h2 className="font-bebas text-xl p-2">Past</h2>
+                              <h2 className="font-bebas text-xl p-2 text-white text-center">Past</h2>
                               <div className="rounded-xl bg-yellow-300 hover:shadow-2xl hover:shadow-yellow-300 transition-all ease-linear">
                                 <Image src={back} className="rounded-xl" width="300" height="500"/>
                               </div>
@@ -102,17 +102,17 @@ export default function ThreeCard() {
                           }
                           {card1flip &&
                             <motion.div className="max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
-                              <h2 className="text-xl p-2 font-bebas">Past</h2>
+                              <h2 className="text-xl p-2 font-bebas text-white text-center">Past</h2>
                               <Image src={ cards[card1].image } width="300" height="500" className="rounded-xl" />
-                              <p className="text-xl p-2 text-yellow-500">{ cards[card1].name}</p>
-                              <p className="text-md p-2 text-yellow-600"> { cards[card1].description } </p>
+                              <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card1].name}</p>
+                              <p className="text-md p-2 text-yellow-100 text-center"> { cards[card1].description } </p>
                             </motion.div>
                           }
                         </div>
                         <div className="max-w-xs p-12" onClick={ () => setCard2Flip(true) } >
                           {!card2flip &&
                             <motion.div className="max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
-                              <h2 className="text-xl p-2 font-bebas">Present</h2>
+                              <h2 className="text-xl p-2 font-bebas text-white text-center">Present</h2>
                               <div className="rounded-xl bg-yellow-300 hover:shadow-2xl hover:shadow-yellow-300 transition-all ease-linear">
                                 <Image src={back} className="rounded-xl" width="300" height="500"/>
                               </div>
@@ -120,11 +120,11 @@ export default function ThreeCard() {
                           }
                           {card2flip &&
                             <motion.div className="max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
-                              <h2 className="text-xl p-2 font-bebas">Present</h2>
+                              <h2 className="text-xl p-2 font-bebas text-white text-center">Present</h2>
                               <Image src={ cards[card2].image } width="300" height="500" className="rounded-xl" />
                               <div>
-                                <p className="text-xl p-2 text-yellow-500">{ cards[card2].name}</p>
-                                <p className="text-md p-2 text-yellow-600"> { cards[card2].description } </p>
+                                <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card2].name}</p>
+                                <p className="text-md p-2 text-yellow-100 text-center"> { cards[card2].description } </p>
                               </div>
                             </motion.div>
                           }
@@ -132,7 +132,7 @@ export default function ThreeCard() {
                         <div className="max-w-xs p-12" onClick={ () => setCard3Flip(true) } >
                           {!card3flip &&
                             <motion.div className="max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
-                              <h2 className="text-xl p-2 font-bebas">Future</h2>
+                              <h2 className="text-xl p-2 font-bebas text-white text-center">Future</h2>
                               <div className="rounded-xl bg-yellow-300 hover:shadow-2xl hover:shadow-yellow-300 transition-all ease-linear">
                                 <Image src={back} className="rounded-xl" width="300" height="500"/>
                               </div>
@@ -140,10 +140,10 @@ export default function ThreeCard() {
                           }
                           {card3flip &&
                             <motion.div className="max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
-                              <h2 className="text-xl p-2 font-bebas">Future</h2>
+                              <h2 className="text-xl p-2 font-bebas text-white text-center">Future</h2>
                               <Image src={ cards[card3].image } width="300" height="500" className="rounded-xl" />
-                              <p className="text-xl p-2 text-yellow-500">{ cards[card3].name}</p>
-                              <p className="text-md p-2 text-yellow-600"> { cards[card3].description } </p>
+                              <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card3].name}</p>
+                              <p className="text-md p-2 text-yellow-100 text-center"> { cards[card3].description } </p>
                             </motion.div>
                           }
                         </div>
