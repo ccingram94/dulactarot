@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Header from '../components/header'
 import AllCardMeanings from '../components/allcardmeanings'
+import MinorArcanaMeanings from '../components/minorarcanameanings'
 
 export default function Meanings() {
   return (
@@ -21,18 +22,6 @@ export default function Meanings() {
         </div> 
         <div className="flex flex-col flex-wrap justify-center p-4 bg-teal-900 text-white font-bebas text-xl md:text-2xl lg:text-4xl">
           <div className="flex flex-row flex-wrap justify-center">
-            <Link href="/majorarcana">
-              <div className="p-4 m-4 bg-black rounded-xl">
-                <h3>Major Arcana</h3>
-              </div>
-            </Link>
-            <Link href="/minorarcana">
-              <div className="p-4 m-4 bg-black rounded-xl">
-                <h3>Minor Arcana</h3>
-              </div>
-            </Link>
-          </div>
-          <div className="flex flex-row flex-wrap justify-center">
             <div className="p-4 m-4 bg-black rounded-xl">
               <h3>Cups</h3>
             </div>
@@ -47,7 +36,7 @@ export default function Meanings() {
             </div>
           </div>
         </div>
-        <AllCardMeanings />
+        <MinorArcanaMeanings />
       </main>
     </div>
   )

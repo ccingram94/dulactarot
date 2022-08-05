@@ -3,8 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Header from '../components/header'
 import AllCardMeanings from '../components/allcardmeanings'
+import MajorArcanaMeanings from '../components/majorarcanameanings'
 
-export default function Meanings() {
+export default function MajorArcana() {
   return (
     <div>
       <Head>
@@ -20,7 +21,7 @@ export default function Meanings() {
         </div>
         <div className="flex flex-col flex-wrap justify-center p-4 bg-teal-900 text-white font-bebas text-xl md:text-2xl lg:text-4xl">
         </div>
-        <AllCardMeanings />
+        <MajorArcanaMeanings />
       </main>
     </div>
   )

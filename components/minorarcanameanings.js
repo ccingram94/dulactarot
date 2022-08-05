@@ -11,7 +11,7 @@ export default function MinorArcanaMeanings () {
         <div className="w-screen h-full bg-teal-900 text-white text-center font-montserrat">
           <div className="flex flex-row flex-wrap justify-center p-12">
             { cards.map( (card) => {
-              while (card.id < 78) {
+              while (card.id > 21 && card.id < 78) {
                 var i = card.id + 78;
                 var cardstring = (card.id).toString()
                 var linkstring = "/cards/" + cardstring

@@ -1,5 +1,5 @@
 
-export const cards = [
+export const major = [
     {
         id: 0,
         name: 'The Fool',

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import ThreeCard from './threecard'
-import { major } from '../major.js'
+import { cards } from '../cards.js'
 
 
 export default function MajorArcanaMeanings () {
@@ -10,7 +10,7 @@ export default function MajorArcanaMeanings () {
     <div>
         <div className="w-screen h-full bg-teal-900 text-white text-center font-montserrat">
           <div className="flex flex-row flex-wrap justify-center p-12">
-            { major.map( (card) => {
+            { cards.map( (card) => {
               while (card.id < 22) {
                 var i = card.id + 78;
                 var cardstring = (card.id).toString()
