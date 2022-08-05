@@ -19,9 +19,9 @@ export default function Meanings() {
       </Head>
       <Header />
       <main className="text-black font-montserrat">
-        <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-teal-500">
-          <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">Tarot Card Readings</h2>
-          <p className="lg:text-lg text-center p-6">free online tarot readings with detailed meanings</p>
+        <div>
+          <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12 bg-yellow-200">Tarot Card Readings</h2>
+          <p className="lg:text-lg text-center p-6 bg-yellow-200">free online tarot readings with detailed meanings</p>
           <div>
             <FreeReadingSection />
           </div>

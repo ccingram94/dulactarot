@@ -81,7 +81,7 @@ export default function YesNoReading() {
                           }
                           {card1flip &&
                             <motion.div className="max-w-xs " initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
-                                <div>
+                                <div className="flex flex-col justify-center">
                                     <h2 className="text-xl lg:text-3xl p-2 font-bebas text-white text-center">Yes/No</h2>
                                     <Image src={ cards[card1].image } width="300" height="500" className="rounded-xl" />
                                     <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card1].name}</p>
