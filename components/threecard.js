@@ -2,12 +2,15 @@ import Head from 'next/head'
 import Image from 'next/image'
 import back from '../public/back.png'
 import { cards } from '../cards.js'
+import LockIcon from '@heroicons/react/outline/LockClosedIcon'
+import { useSession, signIn } from 'next-auth/react'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useSelector, useDispatch } from 'react-redux'
 import { assignCard1, assignCard2, assignCard3 } from '../cardSlice'
 
 export default function ThreeCard() {
+  const { data: session, status } = useSession()
   //initiate redux store stuff and all card states
   const dispatch = useDispatch()
   var card1 = useSelector((state) => state.counter.card1);
@@ -17,6 +20,23 @@ export default function ThreeCard() {
   const [ card1flip, setCard1Flip ] = useState(false);
   const [ card2flip, setCard2Flip ] = useState(false);
   const [ card3flip, setCard3Flip ] = useState(false);
+  const [ saved, setSaved ] = useState(false);
+
+
+  const submitReading = async() => {
+    const readingresults = [[card1, card2, card3], 'pastpresentfuture'];
+    try {
+      const body = {readingresults};
+      await fetch(`/api/post`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   //made results global variables, were previously local and unreachable
   var result1 
   var result2 
@@ -24,10 +44,17 @@ export default function ThreeCard() {
   
   function dealCards() {
     setCardsDealt(true);
+    setSaved(false);
   }
 
   function resetCards() {
     setCardsDealt(false);
+    setSaved(false);
+  }
+
+  function saveReading() {
+    submitReading();
+    setSaved(true);
   }
 
   useEffect(() => {
@@ -87,7 +114,26 @@ export default function ThreeCard() {
                       <button onClick={() => setCardsDealt(false)} className="p-2 rounded-xl text-lg md:text-xl  opacity-40 hover:opacity-90 hover:text-teal-900 hover:bg-white hover:bg-opacity-30 transition-all">New Reading</button>
                     </div>
                     <div className="p-2">
-                      <button className="p-2 rounded-xl text-lg md:text-xl  opacity-40 hover:opacity-90 hover:text-teal-900 hover:bg-white hover:bg-opacity-30 transition-all">Save Reading</button>
+                    {status === 'authenticated' &&
+                        <div>
+                          {!saved &&
+                            <button onClick={() => saveReading()} className="p-2 rounded-xl text-lg md:text-xl  opacity-40 hover:opacity-90 hover:text-teal-900 hover:bg-white hover:bg-opacity-30 transition-all">Save Reading</button>
+                          }
+                          {saved &&
+                            <button onClick={() => saveReading()} className="p-2 rounded-xl text-lg md:text-xl  opacity-40 hover:opacity-90 hover:text-teal-900 hover:bg-white hover:bg-opacity-30 transition-all">Saved! ✨</button>
+                          }
+                        </div>
+                      }
+                      {status != 'authenticated' &&
+                      <div onClick={() => signIn()} className="flex flex-col justify-center">
+                        <div className="flex flex-row justify-center items-center rounded-xl opacity-40 hover:opacity-90 hover:text-teal-900 hover:bg-white hover:bg-opacity-30">
+                          <button className="p-2 rounded-xl text-lg md:text-xl transition-all">Save Reading</button>
+                          <LockIcon className="h-8 opacity-40" />
+                        </div>
+                        <p className="opacity-40 rounded-xl bg-white bg-opacity-20 p-2">log in to save readings</p>
+                      </div>
+                      }
+                      
                     </div>
                   </div>
                   <motion.div className="flex flex-row flex-wrap justify-center min-h-screen" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>

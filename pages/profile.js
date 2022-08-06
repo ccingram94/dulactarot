@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/header'
 import AllCardMeanings from '../components/allcardmeanings'
+import YourOrders from '../components/yourorders'
 import { useSession, signIn, signOut } from 'next-auth/react'
 
 export default function Profile() {
@@ -16,16 +17,16 @@ export default function Profile() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="bg-floral bg-cover min-h-screen text-black font-montserrat">
-        <div className="bg-yellow-200 min-h-screen bg-opacity-80">
+      <main className="bg-floral bg-cover min-h-screen text-black font-montserrat flex flex-row justify-center w-screen">
+        <div className="bg-yellow-200 min-h-screen bg-opacity-80 w-screen px-12">
           <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">My Profile</h2>
           <div className="flex flex-col flex-wrap justify-center text-center">
             <div>
               <button onClick={() => signOut()} className="p-4 m-2 rounded-xl bg-black text-yellow-200 font-bebas text-xl lg:text-2xl">Sign Out</button>
               <h2>no readings saved yet</h2>
-
             </div>
           </div>
+          <YourOrders />
         </div>
       </main>
     </div>

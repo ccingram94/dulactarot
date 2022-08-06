@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/header'
 import YesNoReading from '../components/yesnoreading'
-
+import { useSelector, useDispatch } from 'react-redux'
 
 export default function YesNoTarotReading() {
     return (

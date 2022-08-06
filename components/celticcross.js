@@ -2,13 +2,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import back from '../public/back.png'
 import { cards } from '../cards.js'
+import { useSession, signIn } from 'next-auth/react'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useSelector, useDispatch } from 'react-redux'
+import LockIcon from '@heroicons/react/outline/LockClosedIcon'
 import { assignCard1, assignCard2, assignCard3, assignCard4, assignCard5, assignCard6, assignCard7, assignCard8, assignCard9, assignCard10 } from '../cardSlice'
 
 
 export default function CelticCrossReading() {
+  const { data: session, status } = useSession()
   //initiate redux store stuff and all card states
   const dispatch = useDispatch()
   var card1 = useSelector((state) => state.counter.card1);
@@ -33,6 +36,22 @@ export default function CelticCrossReading() {
   const [ card8flip, setCard8Flip ] = useState(false);
   const [ card9flip, setCard9Flip ] = useState(false);
   const [ card10flip, setCard10Flip ] = useState(false);
+  const [ saved, setSaved ] = useState(false);
+
+  const submitReading = async() => {
+    const readingresults = [[card1, card2, card3, card4, card5, card6, card7, card8, card9, card10], 'celticcross'];
+    try {
+      const body = {readingresults};
+      await fetch(`/api/post`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
 
   //made results global variables, were previously local and unreachable
   var result1 
@@ -48,12 +67,18 @@ export default function CelticCrossReading() {
   
   function dealCards() {
     setCardsDealt(true);
+    setSaved(false);
   }
 
   function resetCards() {
     setCardsDealt(false);
+    setSaved(false);
   }
 
+  function saveReading() {
+    submitReading();
+    setSaved(true);
+  }
 
   useEffect(() => {
     setCard1Flip(false);
@@ -144,7 +169,26 @@ export default function CelticCrossReading() {
                       <button onClick={() => setCardsDealt(false)} className="p-2 rounded-xl text-lg md:text-xl  opacity-40 hover:opacity-90 hover:text-teal-900 hover:bg-white hover:bg-opacity-30 transition-all">New Reading</button>
                     </div>
                     <div className="p-2">
-                      <button className="p-2 rounded-xl text-lg md:text-xl  opacity-40 hover:opacity-90 hover:text-teal-900 hover:bg-white hover:bg-opacity-30 transition-all">Save Reading</button>
+                    {status === 'authenticated' &&
+                        <div>
+                          {!saved &&
+                            <button onClick={() => saveReading()} className="p-2 rounded-xl text-lg md:text-xl  opacity-40 hover:opacity-90 hover:text-teal-900 hover:bg-white hover:bg-opacity-30 transition-all">Save Reading</button>
+                          }
+                          {saved &&
+                            <button onClick={() => saveReading()} className="p-2 rounded-xl text-lg md:text-xl  opacity-40 hover:opacity-90 hover:text-teal-900 hover:bg-white hover:bg-opacity-30 transition-all">Saved! ✨</button>
+                          }
+                        </div>
+                      }
+                      {status != 'authenticated' &&
+                      <div onClick={() => signIn()} className="flex flex-col justify-center">
+                        <div className="flex flex-row justify-center items-center rounded-xl opacity-40 hover:opacity-90 hover:text-teal-900 hover:bg-white hover:bg-opacity-30">
+                          <button className="p-2 rounded-xl text-lg md:text-xl transition-all">Save Reading</button>
+                          <LockIcon className="h-8 opacity-40" />
+                        </div>
+                        <p className="opacity-40 rounded-xl bg-white bg-opacity-20 p-2">log in to save readings</p>
+                      </div>
+                      }
+                      
                     </div>
                   </div>
                   <motion.div className="flex flex-row flex-wrap justify-center h-full max-w-7xl" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>

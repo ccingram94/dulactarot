@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/header'
 import Hero from '../components/hero'
+import SignUpSection from '../components/signupsection'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <SignUpSection />
       </main>
     </div>
   )
