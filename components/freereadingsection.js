@@ -34,7 +34,7 @@ export default function FreeReadingSection () {
               <Image src={sun} className="rounded-full p-4"/>
               <h3 className="font-bebas text-xl lg:text-3xl p-4 text-center pt-8">Celtic Cross </h3>
               <p className="text-xl  text-center p-2 lg:p-4 text-yellow-900"><i>The traditional ten card reading.  An advanced spread exploring all areas of a problem.</i></p>
-              <p className='text-center text-yellow-600'>A Celtic Cross reading can give insights into a person's current situation, their hopes and fears, and what may be coming up in their future. It can also reveal the influences of past actions and events, and how they may be affecting the present.</p>
+              <p className='text-center text-black'>A Celtic Cross reading can give insights into a person's current situation, their hopes and fears, and what may be coming up in their future. It can also reveal the influences of past actions and events, and how they may be affecting the present.</p>
             </div>
           </Link>
         </div>
