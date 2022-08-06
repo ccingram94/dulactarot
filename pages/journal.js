@@ -9,6 +9,7 @@ import { useState } from 'react'
 import prisma from '../lib/prisma'
 import { format, parseJSON } from 'date-fns'
 import { cards } from '../cards.js'
+import { useSession, signIn } from 'next-auth/react'
 
 export const getStaticProps = async() => {
   const session = await getSession();
@@ -28,6 +29,7 @@ export const getStaticProps = async() => {
 
 
 export default function Journal(props) {
+  const { data: session, status } = useSession()
   const [ deleteItem, setDeleteItem ] = useState(null);
   
   return (
@@ -42,17 +44,22 @@ export default function Journal(props) {
         <div className="bg-yellow-200 min-h-screen bg-opacity-80">
           <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">My Tarot Journal</h2>
           <p className="text-xl text-center pb-6">your story, written in the stars</p>
-          <div className="flex flex-row flex-wrap justify-center text-center">
-            
-            {props.readings.map((reading) => (
-              
-              <div className="p-4 m-2 flex flex-col bg-white bg-opacity-90 rounded-xl h-fit" key={reading.id}>
-                <JournalEntry props={reading} />
+          <div className="p-2">
+          {status === 'authenticated' &&
+            <div className="flex flex-row flex-wrap justify-center text-center">
+              {props.readings.map((reading) => (
+                <div className="p-4 m-2 flex flex-col bg-white bg-opacity-90 rounded-xl h-fit" key={reading.id}>
+                  <JournalEntry props={reading} />
+                </div>
+              ))}
               </div>
-
-            ))}
-
-
+            }
+            {status != 'authenticated' &&
+              <div className="flex flex-col flex-wrap justify-center text-center items-center">
+                <p className="p-2 lg:p-4">sign in to save readings to your journal:</p>
+                <button onClick={() => signIn()} className="bg-black text-white p-2 lg:p-4 w-fit rounded-xl hover:shadow-2xl transition-all">Sign In</button>
+              </div>
+            }
           </div>
         </div>
       </main>
