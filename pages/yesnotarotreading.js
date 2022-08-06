@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Header from '../components/header'
 import YesNoReading from '../components/yesnoreading'
 
+
 export default function YesNoTarotReading() {
     return (
       <div>

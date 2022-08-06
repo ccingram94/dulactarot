@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useSelector, useDispatch } from 'react-redux'
 import { assignCard1, assignCard2, assignCard3, assignCard4, assignCard5, assignCard6, assignCard7, assignCard8, assignCard9, assignCard10 } from '../cardSlice'
 
+
 export default function CelticCrossReading() {
   //initiate redux store stuff and all card states
   const dispatch = useDispatch()
@@ -52,6 +53,7 @@ export default function CelticCrossReading() {
   function resetCards() {
     setCardsDealt(false);
   }
+
 
   useEffect(() => {
     setCard1Flip(false);

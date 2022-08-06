@@ -13,6 +13,9 @@ export default function YesNoReading() {
   var card1 = useSelector((state) => state.counter.card1);
   const [cardsDealt, setCardsDealt] = useState(false);
   const [ card1flip, setCard1Flip ] = useState(false);
+  const [ question, setQuestion ] = useState('');
+
+
   //made results global variables, were previously local and unreachable
   var result1 
   
