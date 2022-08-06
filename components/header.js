@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import HeaderAuth from './headerauth'
 import UserIcon from '@heroicons/react/solid/UserCircleIcon'
+import BookIcon from '@heroicons/react/outline/BookOpenIcon'
 import { useSession, signIn, signOut } from 'next-auth/react'
 
 export default function Header() {
@@ -30,7 +31,12 @@ export default function Header() {
                 <h1 className="text-white font-bebas text-2xl lg:text-4xl xl:text-5xl">✨ D u l a c   T a r o t ✨</h1>
               </Link>
             </div>
-            <HeaderAuth />
+            <div className="flex flex-row lg:w-1/3 justify-center p-2">
+              <HeaderAuth />
+              <Link href="/journal">
+                <BookIcon className="w-8 lg:w-12 text-yellow-400 opacity-60" />
+              </Link>
+            </div>
           </div>
         </div>
     </div>
