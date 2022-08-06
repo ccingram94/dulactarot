@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Header from '../components/header'
 import YesNoReading from '../components/yesnoreading'
 import CelticCross from '../components/celticcross'
+import { useSession, signIn, signOut } from 'next-auth/react'
 
 export default function CelticCrossTarotReading() {
     return (
