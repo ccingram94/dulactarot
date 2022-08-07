@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/header'
+import Footer from '../components/footer'
 import YesNoReading from '../components/yesnoreading'
 import CelticCross from '../components/celticcross'
 import { useSession, signIn, signOut } from 'next-auth/react'
@@ -18,6 +19,7 @@ export default function CelticCrossTarotReading() {
           <h2 className="bg-yellow-200 font-bebas text-black text-center text-xl p-4 lg:text-2xl">Celtic Cross Tarot Reading</h2>
             <CelticCross />
         </main>
+        <Footer />
       </div>
     )
   }
