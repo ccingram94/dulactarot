@@ -29,7 +29,12 @@ export const getServerSideProps = async() => {
 
 export default function Journal(props) {
   const { data: session, status } = useSession()
+  const [ loading, setLoading ] = useState(true);
   const [ deleteItem, setDeleteItem ] = useState(null);
+
+  if (props) {
+    setLoading(false);
+  }
   
   return (
     <div>
@@ -43,6 +48,7 @@ export default function Journal(props) {
           <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">My Tarot Journal</h2>
           <p className="text-xl text-center pb-6">your story, written in the stars</p>
           <div className="p-2">
+            {loading && <div>loading your journal...</div>}
           {status === 'authenticated' &&
             <div className="flex flex-row flex-wrap justify-center text-center">
               {props.readings.map((reading) => (
