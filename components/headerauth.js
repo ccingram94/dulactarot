@@ -8,7 +8,7 @@ export default function HeaderAuth() {
     const { data: session, status } = useSession()
     if (status === 'authenticated') {
         return (
-            <div className="flex flex-row lg:w-1/3 justify-center p-2">
+            <div className="flex flex-row lg:w-1/3 justify-center">
                 <Link href="/profile">
                     <UserIcon className="w-8 lg:w-12 text-yellow-400 opacity-60" />
                 </Link>
