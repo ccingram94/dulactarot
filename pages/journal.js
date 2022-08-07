@@ -49,7 +49,7 @@ export default function Journal(props) {
           <meta name="description" content="free tarot reading with AI artwork" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <main className="bg-floral bg-cover min-h-screen text-black font-montserrat">
+        <main className="bg-floral bg-cover min-h-screen text-black font-montserrat w-screen">
           <div className="bg-yellow-200 min-h-screen bg-opacity-80">
             <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">My Tarot Journal</h2>
             <p className="text-xl text-center pb-6">your story, written in the stars</p>
