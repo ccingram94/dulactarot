@@ -31,7 +31,7 @@ export default function Header() {
                 <h1 className="text-white font-bebas text-2xl lg:text-4xl xl:text-5xl">✨ D u l a c   T a r o t ✨</h1>
               </Link>
             </div>
-            <div className="flex flex-row lg:w-1/3 justify-center p-2">
+            <div className="flex flex-row lg:w-1/3 max-h-fit justify-center p-2">
               <HeaderAuth />
               <Link href="/journal">
                 <BookIcon className="w-8 lg:w-12 text-yellow-400 opacity-60" />
