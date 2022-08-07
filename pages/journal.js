@@ -50,12 +50,16 @@ export default function Journal(props) {
               
             {status === 'authenticated' &&
               <div className="flex flex-row flex-wrap justify-center text-center">
-                {loading && <div>loading your journal...</div>}
-                {props.readings.map((reading) => (
-                  <div className="p-4 m-2 flex flex-col bg-white bg-opacity-90 rounded-xl h-fit" key={reading.id}>
-                    <JournalEntry props={reading} />
+                {props && 
+                  <div>
+                    {props.readings.map((reading) => (
+                      <div className="p-4 m-2 flex flex-col bg-white bg-opacity-90 rounded-xl h-fit" key={reading.id}>
+                        <JournalEntry props={reading} />
+                      </div>
+                    ))}
                   </div>
-                ))}
+                }
+                {!props && <div>loading your journal...</div>}
                 </div>
               }
               {status === 'unauthenticated' &&
