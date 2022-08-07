@@ -1,15 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import back from '../public/back.png'
-import onecard from '../public/1card.png'
-import threecard from '../public/3card.png'
-import celticcross from '../public/celticcross.png'
 import Header from '../components/header'
-import AllCardMeanings from '../components/allcardmeanings'
-import FreeReadingSection from '../components/freereadingsection'
 
-export default function Meanings() {
+export default function PrivacyPolicy() {
   return (
     <div>
       <Head>
