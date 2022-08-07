@@ -41,7 +41,7 @@ export default function Journal(props) {
     }
   }, [props])
 
-  if (!props) {
+  if (loading) {
     return (
       <div>
         <Head>
