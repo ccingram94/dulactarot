@@ -9,7 +9,6 @@ export default async function handle(req, res) {
             where: { id: req.body.readingId },
         });
         console.log(success)
-        console.log(readingId)
         res.json(success);
     } else {
         res.status(401).send({ message: 'unauthorized' })

@@ -25,7 +25,7 @@ export default function JournalEntry (props) {
     if (deleted == true) {
         return (
             <div className="p-61 text-center bg-white">
-                <p>entry has been deleted</p>
+                <p>✨ entry has been deleted ✨</p>
             </div>
         )
     }
