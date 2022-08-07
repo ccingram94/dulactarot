@@ -1,10 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import Header from '../components/header'
 import AllCardMeanings from '../components/allcardmeanings'
 import MajorArcanaMeanings from '../components/majorarcanameanings'
-import Footer from '../components/footer'
 
 export default function MajorArcana() {
   return (
@@ -14,7 +12,6 @@ export default function MajorArcana() {
         <meta name="description" content="free tarot reading with AI artwork" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <main className="bg-floral bg-top text-black font-montserrat ">
         <h2 className="bg-yellow-200 bg-opacity-90 text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">Major Arcana</h2>
         <div className="flex flex-row flex-wrap justify-center bg-yellow-200 bg-opacity-90">
@@ -24,7 +21,6 @@ export default function MajorArcana() {
         </div>
         <MajorArcanaMeanings />
       </main>
-      <Footer />
     </div>
   )
 }

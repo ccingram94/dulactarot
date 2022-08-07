@@ -13,12 +13,10 @@ export default function Home() {
         <meta name="description" content="free tarot reading with AI artwork" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <main>
         <Hero />
         <SignUpSection />
       </main>
-      <Footer />
     </div>
   )
 }

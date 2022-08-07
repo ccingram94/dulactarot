@@ -25,8 +25,8 @@ export default function Footer() {
             </div>
             <div className="text-white text-center p-2 lg:p-4">
                 <h4 className="p-4 font-bebas text-xl lg:text-2xl">Explore</h4>
-                <p>Tarot Card Readings</p>
-                <p>Tarot Card Meanings</p>
+                <p>Readings</p>
+                <p>Meanings</p>
                 <p>Blog</p>
             </div>
             <div className="text-white text-center p-2 lg:p-4">

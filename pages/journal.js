@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import Header from '../components/header'
 import AllCardMeanings from '../components/allcardmeanings'
 import JournalEntry from '../components/journalentry'
 import { getSession } from 'next-auth/react'
@@ -10,7 +9,6 @@ import prisma from '../lib/prisma'
 import { format, parseJSON } from 'date-fns'
 import { cards } from '../cards.js'
 import { useSession, signIn } from 'next-auth/react'
-import Footer from '../components/footer'
 
 export const getStaticProps = async() => {
   const session = await getSession();
@@ -40,7 +38,6 @@ export default function Journal(props) {
         <meta name="description" content="free tarot reading with AI artwork" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <main className="bg-floral bg-cover min-h-screen text-black font-montserrat">
         <div className="bg-yellow-200 min-h-screen bg-opacity-80">
           <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">My Tarot Journal</h2>
@@ -64,7 +61,6 @@ export default function Journal(props) {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   )
 }

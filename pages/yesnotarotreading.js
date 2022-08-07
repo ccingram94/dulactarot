@@ -13,12 +13,10 @@ export default function YesNoTarotReading() {
           <meta name="Yes or No Tarot Reading" content="free online yes or no tarot reading" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header />
         <main>
           <h2 className="bg-yellow-200 font-bebas text-black text-center text-xl p-4 lg:text-2xl">Yes or No Tarot Reading</h2>
           <YesNoReading />
         </main>
-        <Footer />
       </div>
     )
   }

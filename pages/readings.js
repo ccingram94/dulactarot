@@ -18,7 +18,6 @@ export default function Meanings() {
         <meta name="description" content="free tarot reading with AI artwork" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <main className="text-black font-montserrat">
         <div className="bg-floral bg-center bg-cover">
           <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12 bg-yellow-200 bg-opacity-60">Tarot Card Readings</h2>
@@ -28,7 +27,6 @@ export default function Meanings() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   )
 }

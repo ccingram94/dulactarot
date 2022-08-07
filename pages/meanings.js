@@ -1,10 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import Header from '../components/header'
 import AllCardMeanings from '../components/allcardmeanings'
 import SearchCards from '../components/searchcards'
-import Footer from '../components/footer'
 
 export default function Meanings() {
   return (
@@ -14,7 +12,6 @@ export default function Meanings() {
         <meta name="description" content="free tarot reading with AI artwork" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <main className="bg-floral bg-bottom text-black font-montserrat">
         <h2 className="bg-yellow-200 bg-opacity-60 text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">Tarot Card Meanings</h2>
         <p className="bg-yellow-200 bg-opacity-60 text-xl text-center pb-6">the ancient art revealed</p>
@@ -37,7 +34,6 @@ export default function Meanings() {
         </div>
         <AllCardMeanings />
       </main>
-      <Footer />
     </div>
   )
 }
