@@ -18,6 +18,9 @@ export const getServerSideProps = async() => {
         email: session?.user?.email,
       },
     },
+    orderBy: {
+      id: 'asc',
+    },
   });
   return {
     props: {
@@ -35,7 +38,6 @@ export default function Journal(props) {
   useEffect(() => {
     if (props) {
       setLoading(false);
-      const newestprops = props.readings.reverse();
     }
   }, [props])
 
@@ -89,7 +91,7 @@ export default function Journal(props) {
             {status === 'authenticated' &&
               <div className="flex flex-row flex-wrap justify-center text-center">
                 {loading && <div>loading your journal...</div>}
-                {newestprops((reading) => (
+                {props.readings.map((reading) => (
                   <div className="p-4 m-2 flex flex-col bg-white bg-opacity-90 rounded-xl h-fit" key={reading.id}>
                     <JournalEntry props={reading} />
                   </div>
