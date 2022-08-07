@@ -59,7 +59,6 @@ export default function Journal(props) {
                     ))}
                   </div>
                 }
-                {!props && <div>loading your journal...</div>}
                 </div>
               }
               {status === 'unauthenticated' &&
