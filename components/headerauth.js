@@ -5,7 +5,7 @@ import UserIcon from '@heroicons/react/solid/UserCircleIcon'
 import { useSession, signIn, signOut } from 'next-auth/react'
 
 export default function HeaderAuth() {
-    const { date: session, status } = useSession()
+    const { data: session, status } = useSession()
     if (status === 'authenticated') {
         return (
             <div className="flex flex-row lg:w-1/3 justify-center p-2">
