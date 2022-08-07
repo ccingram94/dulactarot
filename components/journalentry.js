@@ -51,7 +51,7 @@ export default function JournalEntry (props) {
                   })}
             </div>
             <div>
-                {!caution &&
+                {!caution && !deleting &&
                     <button onClick={() => setCaution(true)} className="bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">delete</button>
                 }
                 {caution &&
