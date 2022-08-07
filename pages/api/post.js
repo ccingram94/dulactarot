@@ -14,12 +14,12 @@ export default async function handle(req, res) {
                     type: typedata,
                     author: { connect: { email: session?.user?.email } },
                 },
-            });
+            })
+            console.log(success)
         } catch(error) {
             console.log(error)
         }
         console.log(req.body)
-        console.log(success)
         res.json(success);
     } else {
         res.status(401).send({ message: 'unauthorized' });
