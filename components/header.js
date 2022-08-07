@@ -14,7 +14,7 @@ export default function Header() {
             <p className="p-2 text-xs font-montserrat text-blue-200 text-center"> ✨ free tarot readings to reveal your fate ✨ </p>
         </div>
         <div className="flex flex-row flex-wrap w-screen text-center justify-center bg-banner bg-cover bg-bottom">
-          <div className="flex flex-col lg:flex-row text-center justify-between items-center w-screen bg-teal-900 bg-opacity-90 lg:pt-6">
+          <div className="flex flex-col lg:flex-row text-center justify-center items-center w-screen bg-teal-900 bg-opacity-90 lg:pt-6">
             <div className="flex flex-row lg:w-1/3 font-bebas text-yellow-500 opacity-60 text-center justify-center">
               <Link href="/meanings">
                 <p className="text-2xl p-2">Meanings</p>
