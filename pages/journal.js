@@ -10,7 +10,7 @@ import { format, parseJSON } from 'date-fns'
 import { cards } from '../cards.js'
 import { useSession, signIn } from 'next-auth/react'
 
-export const getStaticProps = async() => {
+export const getServerSideProps = async() => {
   const session = await getSession();
   const feed = await prisma.reading.findMany({
     where: {
