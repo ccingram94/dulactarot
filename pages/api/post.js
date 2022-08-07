@@ -17,6 +17,7 @@ export default async function handle(req, res) {
         console.log(success)
         res.json(success);
     } else {
-        res.status(401).send({ message: 'unauthorized' })
+        res.status(401).send({ message: 'unauthorized' });
+        console.log(error);
     }
 }
