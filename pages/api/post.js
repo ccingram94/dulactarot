@@ -7,13 +7,18 @@ export default async function handle(req, res) {
     const resultdata = req.body.readingresults[0];
     const session = await getSession({ req });
     if (session) {
-        const success = await prisma.reading.create({
-            data: {
-                result: resultdata,
-                type: typedata,
-                author: { connect: { email: session?.user?.email } },
-            },
-        });
+        try {
+            const success = await prisma.reading.create({
+                data: {
+                    result: resultdata,
+                    type: typedata,
+                    author: { connect: { email: session?.user?.email } },
+                },
+            });
+        } catch(error) {
+            console.log(error)
+        }
+        console.log(req.body)
         console.log(success)
         res.json(success);
     } else {
