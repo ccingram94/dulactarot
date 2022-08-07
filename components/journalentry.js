@@ -40,7 +40,7 @@ export default function JournalEntry (props) {
             {props.props.type == 'yesno' && <h3>✨ Yes or No ✨</h3>}
             {props.props.type == 'pastpresentfuture' && <h3>✨ Past, Present, Future ✨</h3>}
             {props.props.type == 'celticcross' && <h3>✨ Celtic Cross ✨</h3>}
-            <div className="flex flex-row flex-wrap justify-center p-2 max-w-xl">
+            <div className="flex flex-row flex-wrap justify-center p-2">
                   { props.props.result.map( (result) => {
                       return (
                         <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center">
