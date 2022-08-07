@@ -33,7 +33,14 @@ export const getServerSideProps = async() => {
 export default function Journal(props) {
   const { data: session, status } = useSession();
   const [ deleteItem, setDeleteItem ] = useState(null);
+  const [ loading, setLoading ] = useState(false);
 
+  useEffect(() => {
+    setLoading(true);
+    if (props != null) {
+      setLoading(false);
+    }
+  })
 
     return (
       <div>
@@ -50,6 +57,11 @@ export default function Journal(props) {
               
             {status === 'authenticated' &&
               <div className="flex flex-row flex-wrap justify-center text-center">
+                {loading && 
+                  <div>
+                    <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">Loading...</h2>
+                  </div>  
+                }
                 {props && 
                   <div>
                     {props.readings.map((reading) => (
