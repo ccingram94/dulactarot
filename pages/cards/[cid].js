@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import Header from '../../components/header'
 import { cards } from '../../cards'
 import ArrowLeft from '@heroicons/react/outline/ArrowLeftIcon'
 import ArrowRight from '@heroicons/react/outline/ArrowRightIcon'
@@ -43,7 +42,6 @@ export default function CID() {
           <meta name="description" content="free tarot reading with AI artwork" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header />
         <main className="bg-teal-900 text-white font-montserrat">
           <div>
             <div className="flex flex-row flex-wrap justify-center p-6 lg:p-12">
