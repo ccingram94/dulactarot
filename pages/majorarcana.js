@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Header from '../components/header'
 import AllCardMeanings from '../components/allcardmeanings'
 import MajorArcanaMeanings from '../components/majorarcanameanings'
+import Footer from '../components/footer'
 
 export default function MajorArcana() {
   return (
@@ -23,6 +24,7 @@ export default function MajorArcana() {
         </div>
         <MajorArcanaMeanings />
       </main>
+      <Footer />
     </div>
   )
 }

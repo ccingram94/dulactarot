@@ -4,6 +4,7 @@ import Header from '../components/header'
 import AllCardMeanings from '../components/allcardmeanings'
 import YourOrders from '../components/yourorders'
 import { useSession, signIn, signOut } from 'next-auth/react'
+import Footer from '../components/footer'
 
 export default function Profile() {
   const { date: session, status } = useSession()
@@ -53,6 +54,7 @@ export default function Profile() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
     )
   }

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Header from '../components/header'
 import AllCardMeanings from '../components/allcardmeanings'
 import SearchCards from '../components/searchcards'
+import Footer from '../components/footer'
 
 export default function Meanings() {
   return (
@@ -36,6 +37,7 @@ export default function Meanings() {
         </div>
         <AllCardMeanings />
       </main>
+      <Footer />
     </div>
   )
 }

@@ -10,6 +10,7 @@ import prisma from '../lib/prisma'
 import { format, parseJSON } from 'date-fns'
 import { cards } from '../cards.js'
 import { useSession, signIn } from 'next-auth/react'
+import Footer from '../components/footer'
 
 export const getStaticProps = async() => {
   const session = await getSession();
@@ -63,6 +64,7 @@ export default function Journal(props) {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

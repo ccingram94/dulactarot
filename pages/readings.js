@@ -8,6 +8,7 @@ import celticcross from '../public/celticcross.png'
 import Header from '../components/header'
 import AllCardMeanings from '../components/allcardmeanings'
 import FreeReadingSection from '../components/freereadingsection'
+import Footer from '../components/footer'
 
 export default function Meanings() {
   return (
@@ -27,6 +28,7 @@ export default function Meanings() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   )
 }
