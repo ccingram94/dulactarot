@@ -19,7 +19,7 @@ export const getServerSideProps = async() => {
       },
     },
     orderBy: {
-      id: 'asc',
+      id: 'desc',
     },
   });
   return {
