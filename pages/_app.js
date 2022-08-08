@@ -29,8 +29,8 @@ export default function MyApp({ Component, pageProps: { session, ...pageProps } 
       };
   }, []);
     return (
-      <>
-        {loading ? (
+      <div>
+        { loading &&
           <>
             <Header />
             <div className="bg-yellow-200 text-xl lg:text-2xl text-center flex flex-col justify-center">
@@ -38,17 +38,18 @@ export default function MyApp({ Component, pageProps: { session, ...pageProps } 
             </div>
             <Footer />
           </>
-        ) : (
+          }
+          {!loading &&
           <>
             <Provider store={store}>
-            <SessionProvider session={session}>
-              <Header />
-                <Component {...pageProps} />
-              <Footer />
-            </SessionProvider>
-          </Provider>
+              <SessionProvider session={session}>
+                <Header />
+                  <Component {...pageProps} />
+                <Footer />
+              </SessionProvider>
+            </Provider>
           </>
-        )}
-      </>
+          }
+        </div>
     );
 }
