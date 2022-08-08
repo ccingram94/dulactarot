@@ -1,7 +1,9 @@
+import Head from 'next/head'
 
 export default function SignUpSection() {
     return (
         <div className="bg-floral bg-cover">
+             
             <div className="bg-yellow-200 bg-opacity-80">
                 <h2 className="p-4 pt-12 text-black text-center font-bebas text-2xl lg:text-6xl">Sign Up for a Free Account</h2>
                 <div>
