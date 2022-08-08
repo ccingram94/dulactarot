@@ -16,13 +16,13 @@ export default function AllCardMeanings () {
                 var cardstring = (card.id).toString()
                 var linkstring = "/cards/" + cardstring
                 return (
-                  <div key={card.id} className="bg-black p-2 lg:m-2 rounded-xl max-w-xs">
+                  <div key={card.id} className="bg-black p-2 m-2 lg:m-2 rounded-xl max-w-xs">
                     <Image src={card.image} height="250" width="150" layout="responsive" className="rounded-xl"/>
-                    <h3 className="font-bebas text-md lg:text-xl p-3 pt-6 lg:pt-12">{card.name}</h3>
-                    <p className="p-2">{card.description}</p>
-                    <p className="p-2">Reversed: {cards[i].description}</p>
+                    <h3 className="font-bebas text-xl lg:text-3xl p-3 pt-6 lg:pt-12">{card.name}</h3>
+                    <p className="p-2 lg:text-xl">{card.description}</p>
+                    <p className="p-2 lg:text-xl">Reversed: {cards[i].description}</p>
                     <Link href={ linkstring }>
-                      <button className="bg-yellow-200 text-black p-4 rounded-xl m-2">More Information</button>
+                      <button className="bg-yellow-200 text-black p-4 rounded-xl m-4">More Information</button>
                     </Link>
                   </div>
                 );
