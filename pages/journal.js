@@ -57,12 +57,6 @@ export default function Journal(props) {
               
             {status === 'authenticated' &&
               <div className="flex flex-row flex-wrap justify-center text-center">
-                {loading && 
-                  <div>
-                    <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">Loading...</h2>
-                  </div>  
-                }
-                {props && 
                   <div>
                     {props.readings.map((reading) => (
                       <div className="p-4 m-2 flex flex-col bg-white bg-opacity-90 rounded-xl h-fit" key={reading.id}>
@@ -70,8 +64,7 @@ export default function Journal(props) {
                       </div>
                     ))}
                   </div>
-                }
-                </div>
+              </div>
               }
               {status === 'unauthenticated' &&
                 <div className="flex flex-col flex-wrap justify-center text-center items-center">
