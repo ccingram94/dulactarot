@@ -13,7 +13,7 @@ export default function SearchCards() {
   const [ searchResults, setSearchResults ] = useState([])
   return (
     <div className="flex flex-col flex-wrap justify-center text-center">
-        <section className="text-black m-2">
+        <section className="text-black p-2">
             <form onChange={(e) => setSearchTerm((e.target.value).toLowerCase())}>
                 <input type="text" placeholder="search cards" className="p-2 rounded-xl" />
             </form>
