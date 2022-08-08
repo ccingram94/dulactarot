@@ -14,11 +14,13 @@ export default function FreeReadingSection () {
     <div>
         <div className="flex flex-row flex-wrap justify-center p-4 pt-12 bg-black text-black">
           <Link href="/yesnotarotreading">
-            <div className="max-w-xs max-h-[75vh] bg-yellow-200 p-6 m-3 flex flex-col justify-start hover:shadow-2xl hover:shadow-yellow-100 transition-all rounded-xl">
-              <Image src={queen} layout="responsive" className="rounded-full p-4" />
-              <h3 className="font-bebas text-xl lg:text-3xl p-4 pt-8 text-center">Yes or No </h3>
-              <p className="text-md text-center p-2 text-yellow-600"><i>A one card reading with a yes or no answer.</i></p>
-              <p className="text-sm text-center p-2 lg:p-4 text-yellow-600">A "Yes/No" tarot reading is a quick and easy way to get guidance on a yes or no question. This type of reading can reveal whether a person is on the right track, and can also provide clarity on a person's future.</p>
+            <div className="max-w-xs bg-yellow-200 p-6 m-3 flex flex-col justify-start hover:shadow-2xl hover:shadow-yellow-100 transition-all rounded-xl">
+              <div className="max-h-[50vh]">
+                <Image src={queen} layout="responsive" className="rounded-full p-4" />
+                <h3 className="font-bebas text-xl lg:text-3xl p-4 pt-8 text-center">Yes or No </h3>
+                <p className="text-md text-center p-2 text-yellow-600"><i>A one card reading with a yes or no answer.</i></p>
+                <p className="text-sm text-center p-2 lg:p-4 text-yellow-600">A "Yes/No" tarot reading is a quick and easy way to get guidance on a yes or no question. This type of reading can reveal whether a person is on the right track, and can also provide clarity on a person's future.</p>
+              </div>
             </div>
           </Link>
           <Link href="/pastpresentfuturetarotreading">
