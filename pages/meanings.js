@@ -18,12 +18,12 @@ export default function Meanings() {
         <div className="flex flex-col flex-wrap justify-center p-4 bg-teal-900 text-white font-bebas text-xl md:text-2xl lg:text-4xl">
           <div className="flex flex-row flex-wrap justify-center">
             <Link href="/majorarcana">
-              <div className="p-4 m-4 bg-yellow-200 text-black rounded-xl hover:shadow-2xl hover:shadow-yellow-200 transition-all">
+              <div className="p-2 lg:m-2 bg-yellow-200 text-black rounded-xl hover:shadow-2xl hover:shadow-yellow-200 transition-all">
                 <h3>Major Arcana</h3>
               </div>
             </Link>
             <Link href="/minorarcana">
-              <div className="p-4 m-4 bg-yellow-200 text-black rounded-xl hover:shadow-2xl hover:shadow-yellow-200 transition-all">
+              <div className="p-2 lg:m-2 bg-yellow-200 text-black rounded-xl hover:shadow-2xl hover:shadow-yellow-200 transition-all">
                 <h3>Minor Arcana</h3>
               </div>
             </Link>
