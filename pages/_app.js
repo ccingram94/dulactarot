@@ -33,7 +33,6 @@ export default function MyApp({ Component, pageProps: { session, ...pageProps } 
         {loading ? (
           <h1 className="h-screen bg-yellow-200 text-xl lg:text-2xl text-center">Loading...</h1>
         ) : (
-          <>
             <Provider store={store}>
             <SessionProvider session={session}>
               <Header />
@@ -41,7 +40,6 @@ export default function MyApp({ Component, pageProps: { session, ...pageProps } 
               <Footer />
             </SessionProvider>
           </Provider>
-          </>
         )}
       </>
     );
