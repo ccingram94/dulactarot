@@ -29,27 +29,20 @@ export default function MyApp({ Component, pageProps: { session, ...pageProps } 
       };
   }, []);
     return (
-      <div>
-        { loading &&
-          <>
-            <Header />
-            <div className="bg-yellow-200 text-xl lg:text-2xl text-center flex flex-col justify-center">
-              <h1>Loading...</h1>
-            </div>
-            <Footer />
-          </>
-          }
-          {!loading &&
+      <>
+        {loading ? (
+          <h1 className="h-screen bg-yellow-200 text-xl lg:text-2xl text-center">Loading...</h1>
+        ) : (
           <>
             <Provider store={store}>
-              <SessionProvider session={session}>
-                <Header />
-                  <Component {...pageProps} />
-                <Footer />
-              </SessionProvider>
-            </Provider>
+            <SessionProvider session={session}>
+              <Header />
+                <Component {...pageProps} />
+              <Footer />
+            </SessionProvider>
+          </Provider>
           </>
-          }
-        </div>
+        )}
+      </>
     );
 }
