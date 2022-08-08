@@ -14,7 +14,7 @@ export default function FreeReadingSection () {
     <div>
         <div className="flex flex-row flex-wrap justify-center p-4 pt-12 bg-black text-black">
           <Link href="/yesnotarotreading">
-            <div className="max-w-xs bg-yellow-200 p-6 m-3 flex flex-col justify-start max-w-sm hover:shadow-2xl hover:shadow-yellow-100 transition-all rounded-xl">
+            <div className="max-w-xs max-h-80 bg-yellow-200 p-6 m-3 flex flex-col justify-start hover:shadow-2xl hover:shadow-yellow-100 transition-all rounded-xl">
               <Image src={queen} className="rounded-full p-4" />
               <h3 className="font-bebas text-xl lg:text-3xl p-4 pt-8 text-center">Yes or No </h3>
               <p className="text-md text-center p-2 text-yellow-600"><i>A one card reading with a yes or no answer.</i></p>
