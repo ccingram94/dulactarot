@@ -31,7 +31,7 @@ export default function MyApp({ Component, pageProps: { session, ...pageProps } 
     return (
       <>
         {loading ? (
-          <h1 className="h-screen bg-yellow-200 text-xl lg:text-2xl text-center">Loading...</h1>
+          <h1 className=" pt-[50%] h-screen flex flex-col justify-center bg-yellow-200 text-xl lg:text-2xl text-center">Loading...</h1>
         ) : (
             <Provider store={store}>
             <SessionProvider session={session}>
