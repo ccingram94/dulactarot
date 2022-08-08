@@ -31,7 +31,13 @@ export default function MyApp({ Component, pageProps: { session, ...pageProps } 
     return (
       <>
         {loading ? (
-          <h1>Loading...</h1>
+          <div>
+            <Header />
+            <div className="bg-yellow-200 text-xl lg:text-2xl">
+              <h1>Loading...</h1>
+            </div>
+            <Footer />
+          </div>
         ) : (
           <>
             <Provider store={store}>
