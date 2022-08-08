@@ -17,13 +17,13 @@ export default function Header() {
           <div className="flex flex-col lg:flex-row text-center justify-center items-center w-screen bg-teal-900 bg-opacity-90 lg:pt-6">
             <div className="flex flex-row lg:w-1/3 font-bebas text-yellow-500 opacity-60 text-center justify-center">
               <Link href="/meanings">
-                <p className="text-2xl p-2">Meanings</p>
+                <button className="text-2xl p-2">Meanings</button>
               </Link>
               <Link href="/readings">
-                <p className="text-2xl p-2">Readings</p>
+                <button className="text-2xl p-2">Readings</button>
               </Link>
               <Link href="/journal">
-                <p className="text-2xl p-2">Journal</p>
+                <button className="text-2xl p-2">Journal</button>
               </Link>
             </div>
             <div className="flex lg:w-1/3 justify-center lg:p-4">
