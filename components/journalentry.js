@@ -37,7 +37,7 @@ export default function JournalEntry (props) {
     return (
         <div className="flex flex-col flex-wrap justify-center">
             <h2 className="font-bebas text-xl lg:text-2xl text-center p-2">{format(parseJSON(props.props.createdAt), 'PPPP')}</h2>
-            <p className="font-bebas text-xl lg:text-2xl text-center p-2">Notes: {props.props.notes}</p>
+            <p className="text-center p-2">Notes: {props.props.notes}</p>
             {props.props.type == 'yesno' && <h3>✨ Yes or No ✨</h3>}
             {props.props.type == 'pastpresentfuture' && <h3>✨ Past, Present, Future ✨</h3>}
             {props.props.type == 'celticcross' && <h3>✨ Celtic Cross ✨</h3>}
