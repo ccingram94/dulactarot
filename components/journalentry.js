@@ -3,7 +3,7 @@ import { cards } from '../cards.js'
 import { format, parseJSON } from 'date-fns'
 
 export default function JournalEntry (props) {
-    const [ readingnotes, setReadingNotes ] = useState(props.props.notes)
+    const [ newnotes, setNewNotes ] = useState(props.props.notes)
     const [ caution, setCaution ] = useState(false);
     const [ deleted, setDeleted ] = useState(false);
     const [ deleting, setDeleting ] = useState(false);
@@ -38,8 +38,9 @@ export default function JournalEntry (props) {
         setEditing(false);
         setSubmittingEdit(true);
           const readingId = deleteItem;
+          const readingNotes = newnotes;
+          const body = { readingId, readingNotes };
           try {
-            const body = {readingId};
             await fetch(`/api/edit`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -68,7 +69,7 @@ export default function JournalEntry (props) {
             {!editing && <p className="text-center p-2">Notes: {props.props.notes}</p>}
             {editing && 
             <div>
-              <textarea input="text" label="editingtext" onChange={() => {setReadingNotes(e.target.value)}}>{readingnotes}</textarea>
+              <textarea input="text" label="editingtext" onChange={() => {setNewNotes(e.target.value)}}>{newnotes}</textarea>
             </div>
             }
             {props.props.type == 'yesno' && <h3>✨ Yes or No ✨</h3>}

@@ -3,18 +3,18 @@ import { getSession } from 'next-auth/react'
 
 export default async function handle(req, res) {
     const { payload } = req.body; 
-    const typedata = req.body.readingresults[1];
-    const resultdata = req.body.readingresults[0];
-    const notedata = req.body.readingresults[2];
+    const notedata = req.body.readingNotes;
+    const iddata = req.body.readingId;
     const session = await getSession({ req });
     if (session) {
-        const success = await prisma.reading.create({
+        const success = await prisma.reading.upsert({
             data: {
-                    result: resultdata,
-                    type: typedata,
                     notes: notedata,
                     author: { connect: { email: session?.user?.email } },
                 },
+            where: {
+                id: iddata,
+            },
             });
         console.log(success)
         res.json(success);
