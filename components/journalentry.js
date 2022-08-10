@@ -3,7 +3,7 @@ import { cards } from '../cards.js'
 import { format, parseJSON } from 'date-fns'
 
 export default function JournalEntry (props) {
-    const [ newnotes, setNewNotes ] = useState(props.props.notes.toString())
+    const [ newnotes, setNewNotes ] = useState(props.props.notes)
     const [ caution, setCaution ] = useState(false);
     const [ deleted, setDeleted ] = useState(false);
     const [ deleting, setDeleting ] = useState(false);
