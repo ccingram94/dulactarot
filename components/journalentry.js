@@ -46,6 +46,7 @@ export default function JournalEntry (props) {
                         <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center">
                             <img src={cards[result].image} className="rounded-xl h-40 max-w-fit"/>
                           <h3 className="font-bebas text-xl lg:text-2xl p-2 max-w-xs">{cards[result].name}</h3>
+                          <p>{cards[result].description}</p>
                         </div>
                       );
                   })}
