@@ -9,11 +9,11 @@ export default async function handle(req, res) {
     console.log(iddata)
     const session = await getSession({ req });
     if (session) {
-        const success = await prisma.reading.upsert({
+        const success = await prisma.reading.update({
             where: {
                 id: iddata,
             },
-            update: {
+            data: {
                 notes: notedata,
             },
             });
