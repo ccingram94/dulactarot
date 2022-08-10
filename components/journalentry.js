@@ -66,10 +66,10 @@ export default function JournalEntry (props) {
         <div className="flex flex-col flex-wrap justify-center">
             <h2 className="font-bebas text-xl lg:text-2xl text-center p-2">{format(parseJSON(props.props.createdAt), 'PPPP')}</h2>
             
-            {!editing && <p className="text-center p-2">Notes: {props.props.notes}</p>}
+            {!editing && <p className="text-center p-2">Notes: {newnotes}</p>}
             {editing && 
             <div>
-              <textarea input="text" label="editingtext" onChange={() => {setNewNotes(e.target.value)}}>{newnotes}</textarea>
+              <textarea input="text" label="editingtext" onChange={() => {setNewNotes(e.target.value)}} className="p-4 m-2 focus:outline-none text-center">{newnotes}</textarea>
             </div>
             }
             {props.props.type == 'yesno' && <h3>✨ Yes or No ✨</h3>}
