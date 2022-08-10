@@ -87,7 +87,7 @@ export default function JournalEntry (props) {
                   })}
             </div>
             <div>
-              {!editing && !edited && <button onClick={() => editReading(true)} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">edit</button>}
+              {!editing && !submitting && !edited && <button onClick={() => editReading(true)} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">edit</button>}
               {editing && <button onClick={() => submitEdit()} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">submit</button>}
               {submittingEdit && <button onClick={() => submitEdit()} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">submitting...</button>}
               {edited && <button className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">updated! ✨</button>}
