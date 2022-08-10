@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { cards } from '../cards.js'
 import { format, parseJSON } from 'date-fns'
 
 export default function JournalEntry (props) {
-    const [ newnotes, setNewNotes ] = useState(props.props.notes)
+    const [ newnotes, setNewNotes ] = useState('')
     const [ caution, setCaution ] = useState(false);
     const [ deleted, setDeleted ] = useState(false);
     const [ deleting, setDeleting ] = useState(false);
@@ -12,6 +12,10 @@ export default function JournalEntry (props) {
     const [ submittingEdit, setSubmittingEdit ] = useState(false);
     const [ edited, setEdited ] = useState(false);
     const deleteItem = props.props.id;
+
+    useEffect(() => {
+      setNewNotes(props.props.notes);
+    })
 
     const deleteReading = async() => {
       setCaution(false);
