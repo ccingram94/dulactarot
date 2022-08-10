@@ -59,6 +59,7 @@ model Reading {
   id         Int        @id @default(autoincrement())
   createdAt  DateTime   @default(now())
   question   String?
+  notes      String?
   result     Int[]
   type       String?
   published  Boolean    @default(false)
