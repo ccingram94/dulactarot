@@ -73,7 +73,7 @@ export default function JournalEntry (props) {
             {!editing && <p className="text-center p-2">Notes: {newnotes}</p>}
             {editing && 
             <div>
-              <textarea input="text" label="editingtext" onChange={() => {setNewNotes(e.target.value)}} className="p-4 m-2 focus:outline-none text-center">{newnotes}</textarea>
+              <textarea input="text" label="editingtext" onChange={(e) => {setNewNotes(e.target.value)}} className="p-4 m-2 focus:outline-none text-center">{newnotes}</textarea>
             </div>
             }
             {props.props.type == 'yesno' && <h3>✨ Yes or No ✨</h3>}
