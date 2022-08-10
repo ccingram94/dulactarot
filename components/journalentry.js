@@ -43,7 +43,10 @@ export default function JournalEntry (props) {
         setSubmittingEdit(true);
           const readingId = deleteItem;
           const readingNotes = newnotes;
+          console.log(readingId)
+          console.log(readingNotes)
           const body = { readingId, readingNotes };
+          console.log(body)
           try {
             await fetch(`/api/edit`, {
               method: "POST",
