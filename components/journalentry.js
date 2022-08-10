@@ -79,23 +79,23 @@ export default function JournalEntry (props) {
                   })}
             </div>
             <div>
-              {!editing && !edited && <button onClick={() => editReading(true)} className="bg-yellow-200 bg-opacity-20 hover:bg-oopacity-80 p-2 rounded-xl transition-all">edit</button>}
-              {editing && <button onClick={() => submitEdit()} className="bg-yellow-200 bg-opacity-20 hover:bg-oopacity-80 p-2 rounded-xl transition-all">submit</button>}
-              {submittingEdit && <button onClick={() => submitEdit()} className="bg-yellow-200 bg-opacity-20 hover:bg-oopacity-80 p-2 rounded-xl transition-all">submitting...</button>}
-              {edited && <button className="bg-yellow-200 bg-opacity-20 hover:bg-oopacity-80 p-2 rounded-xl transition-all">updated! ✨</button>}
+              {!editing && !edited && <button onClick={() => editReading(true)} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">edit</button>}
+              {editing && <button onClick={() => submitEdit()} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">submit</button>}
+              {submittingEdit && <button onClick={() => submitEdit()} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">submitting...</button>}
+              {edited && <button className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">updated! ✨</button>}
               
                 {!caution && !deleting &&
-                    <button onClick={() => setCaution(true)} className="bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">delete</button>
+                    <button onClick={() => setCaution(true)} className="m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">delete</button>
                 }
                 {caution &&
                     <div>
                         <p className="pb-2">you sure?</p>
-                        <button onClick={() => deleteReading()} className="bg-red-300 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">yes, delete!</button>
+                        <button onClick={() => deleteReading()} className="m-2 bg-red-300 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">yes, delete!</button>
                     </div>
                 }
                 {deleting &&
                     <div>
-                        <button className="bg-red-300 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">deleting...</button>
+                        <button className="m-2 bg-red-300 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">deleting...</button>
                     </div>
                 }
             </div>
