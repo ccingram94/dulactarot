@@ -9,7 +9,7 @@ export default function JournalEntry (props) {
     const [ deleting, setDeleting ] = useState(false);
     const [ editing, setEditing ] = useState(false);
     const [ submittingEdit, setSubmittingEdit ] = useState(false);
-    const [ edited, setEdited ] = useState(true);
+    const [ edited, setEdited ] = useState(false);
     const deleteItem = props.props.id;
 
     const deleteReading = async() => {
