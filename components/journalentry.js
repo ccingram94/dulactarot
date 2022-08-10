@@ -7,6 +7,7 @@ export default function JournalEntry (props) {
     const [ caution, setCaution ] = useState(false);
     const [ deleted, setDeleted ] = useState(false);
     const [ deleting, setDeleting ] = useState(false);
+    const [ showEdit, setShowEdit ] = useState(true);
     const [ editing, setEditing ] = useState(false);
     const [ submittingEdit, setSubmittingEdit ] = useState(false);
     const [ edited, setEdited ] = useState(false);
@@ -31,6 +32,7 @@ export default function JournalEntry (props) {
       }
 
       const editReading = () => {
+        showEdit(false);
         setEditing(true);
       }
 
@@ -87,7 +89,7 @@ export default function JournalEntry (props) {
                   })}
             </div>
             <div>
-              {!editing && !submitting && !edited && <button onClick={() => editReading(true)} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">edit</button>}
+              {showEdit && <button onClick={() => editReading(true)} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">edit</button>}
               {editing && <button onClick={() => submitEdit()} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">submit</button>}
               {submittingEdit && <button onClick={() => submitEdit()} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">submitting...</button>}
               {edited && <button className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">updated! ✨</button>}
