@@ -3,6 +3,7 @@ import { cards } from '../cards.js'
 import { format, parseJSON } from 'date-fns'
 
 export default function JournalEntry (props) {
+    const [ readingnotes, setReadingNotes ] = useState(props.props.notes)
     const [ caution, setCaution ] = useState(false);
     const [ deleted, setDeleted ] = useState(false);
     const [ deleting, setDeleting ] = useState(false);
@@ -63,7 +64,13 @@ export default function JournalEntry (props) {
     return (
         <div className="flex flex-col flex-wrap justify-center">
             <h2 className="font-bebas text-xl lg:text-2xl text-center p-2">{format(parseJSON(props.props.createdAt), 'PPPP')}</h2>
-            <p className="text-center p-2">Notes: {props.props.notes}</p>
+            
+            {!editing && <p className="text-center p-2">Notes: {props.props.notes}</p>}
+            {editing && 
+            <div>
+              <textarea input="text" label="editingtext" onChange={() => {setReadingNotes(e.target.value)}}>{readingnotes}</textarea>
+            </div>
+            }
             {props.props.type == 'yesno' && <h3>✨ Yes or No ✨</h3>}
             {props.props.type == 'pastpresentfuture' && <h3>✨ Past, Present, Future ✨</h3>}
             {props.props.type == 'celticcross' && <h3>✨ Celtic Cross ✨</h3>}
