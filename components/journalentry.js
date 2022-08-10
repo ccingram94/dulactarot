@@ -3,7 +3,7 @@ import { cards } from '../cards.js'
 import { format, parseJSON } from 'date-fns'
 
 export default function JournalEntry (props) {
-    const [ newnotes, setNewNotes ] = useState('')
+    const [ newnotes, setNewNotes ] = useState(props.props.notes.toString())
     const [ caution, setCaution ] = useState(false);
     const [ deleted, setDeleted ] = useState(false);
     const [ deleting, setDeleting ] = useState(false);
@@ -13,9 +13,7 @@ export default function JournalEntry (props) {
     const [ edited, setEdited ] = useState(false);
     const deleteItem = props.props.id;
 
-    useEffect(() => {
-      setNewNotes(props.props.notes);
-    })
+    
 
     const deleteReading = async() => {
       setCaution(false);
@@ -95,7 +93,7 @@ export default function JournalEntry (props) {
             <div>
               {showEdit && <button onClick={() => editReading(true)} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">edit</button>}
               {editing && <button onClick={() => submitEdit()} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">submit</button>}
-              {submittingEdit && <button onClick={() => submitEdit()} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">submitting...</button>}
+              {submittingEdit && <button className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">submitting...</button>}
               {edited && <button className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">updated! ✨</button>}
               
                 {!caution && !deleting &&
