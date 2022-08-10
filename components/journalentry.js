@@ -33,7 +33,7 @@ export default function JournalEntry (props) {
         setDeleting(false);
       }
 
-      const editReading = () => {
+      function editReading () {
         showEdit(false);
         setEditing(true);
       }
