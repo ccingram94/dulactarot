@@ -6,6 +6,9 @@ export default function JournalEntry (props) {
     const [ caution, setCaution ] = useState(false);
     const [ deleted, setDeleted ] = useState(false);
     const [ deleting, setDeleting ] = useState(false);
+    const [ editing, setEditing ] = useState(false);
+    const [ submittingEdit, setSubmittingEdit ] = useState(false);
+    const [ edited, setEdited ] = useState(true);
     const deleteItem = props.props.id;
 
     const deleteReading = async() => {
@@ -25,6 +28,29 @@ export default function JournalEntry (props) {
         }
         setDeleting(false);
       }
+
+      const editReading = () => {
+        setEditing(true);
+      }
+
+      const submitEdit = async() => {
+        setEditing(false);
+        setSubmittingEdit(true);
+          const readingId = deleteItem;
+          try {
+            const body = {readingId};
+            await fetch(`/api/edit`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(body),
+            });
+            setEdited(true);
+          } catch (error) {
+            console.error(error)
+          }
+        setSubmittingEdit(false);
+        setEdited(true);
+        }
 
     if (deleted == true) {
         return (
@@ -53,6 +79,11 @@ export default function JournalEntry (props) {
                   })}
             </div>
             <div>
+              {!editing && <button onClick={() => editReading(true)} className="bg-yellow-200 bg-opacity-20 hover:bg-oopacity-80 p-2 rounded-xl transition-all">edit</button>}
+              {editing && <button onClick={() => submitEdit()} className="bg-yellow-200 bg-opacity-20 hover:bg-oopacity-80 p-2 rounded-xl transition-all">submit</button>}
+              {submittingEdit && <button onClick={() => submitEdit()} className="bg-yellow-200 bg-opacity-20 hover:bg-oopacity-80 p-2 rounded-xl transition-all">submitting...</button>}
+              {edited && <button className="bg-yellow-200 bg-opacity-20 hover:bg-oopacity-80 p-2 rounded-xl transition-all">updated! ✨</button>}
+              
                 {!caution && !deleting &&
                     <button onClick={() => setCaution(true)} className="bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">delete</button>
                 }
