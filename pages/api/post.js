@@ -5,15 +5,13 @@ export default async function handle(req, res) {
     const { payload } = req.body; 
     const typedata = req.body.readingresults[1];
     const resultdata = req.body.readingresults[0];
-    const questiondata = req.body.readingresults[2];
-    const notedata = req.body.readingresults[3];
+    const notedata = req.body.readingresults[2];
     const session = await getSession({ req });
     if (session) {
         const success = await prisma.reading.create({
             data: {
                     result: resultdata,
                     type: typedata,
-                    question: questiondata,
                     notes: notedata,
                     author: { connect: { email: session?.user?.email } },
                 },

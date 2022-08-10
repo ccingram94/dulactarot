@@ -18,11 +18,10 @@ export default function YesNoReading() {
   const [cardsDealt, setCardsDealt] = useState(false);
   const [ card1flip, setCard1Flip ] = useState(false);
   const [ saved, setSaved ] = useState(false);
-  const [ question, setQuestion ] = useState('');
   const [ notes, setNotes ] = useState('');
 
   const submitReading = async() => {
-    const readingresults = [card1, 'yesno', question, notes]
+    const readingresults = [card1, 'yesno', notes]
     try {
       const body = {readingresults};
       await fetch(`/api/post`, {
@@ -122,8 +121,7 @@ export default function YesNoReading() {
                     }
                   {status === 'authenticated' &&
                     <div>
-                      <input type="text" label="question" placeholder="enter a question to save" onChange={(e) => setQuestion(e.target.value)} className="p-2 rounded-xl m-2" />
-                      <textarea type="text" label="notes" placeholder="enter reading notes to save" onChange={(e) => setNotes(e.target.value)} className="p-2 rounded-xl m-2"/>
+                      <textarea type="text" label="notes" placeholder="enter reading notes" onChange={(e) => setNotes(e.target.value)} className="p-2 rounded-xl m-2"/>
                     </div>
                   }
                   </div>
