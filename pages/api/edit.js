@@ -14,7 +14,7 @@ export default async function handle(req, res) {
                 id: iddata,
             },
             update: {
-                note: notedata,
+                notes: notedata,
             },
             });
         console.log(success)
