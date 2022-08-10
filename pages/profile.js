@@ -23,7 +23,6 @@ export default function Profile() {
           <div className="flex flex-col flex-wrap justify-center text-center">
             <div>
               <button onClick={() => signOut()} className="p-4 m-2 rounded-xl bg-black text-yellow-200 font-bebas text-xl lg:text-2xl">Sign Out</button>
-              <h2>no readings saved yet</h2>
             </div>
           </div>
           <YourOrders />

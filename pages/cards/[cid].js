@@ -80,10 +80,10 @@ export default function CID() {
                   {!id && <p>loading...</p>}
                   {id && 
                     <div className="flex flex-col align-center justify-center">
-                      <h2 className="text-4xl text-teal-600 lg:text-6xl font-bebas text-center p-2 pt-12">The Meaning of { cards[id].name}</h2>
-                      <div className="flex max-w-3xl text-center justify-center p-6 pt-12 rounded-xl bg-opacity-30">
+                      <h2 className="text-4xl text-yellow-200 lg:text-6xl font-bebas text-center p-2 pt-12">The Meaning of { cards[id].name}</h2>
+                      <div className="flex max-w-3xl text-yellow-200 text-center justify-center p-6 pt-12 rounded-xl bg-opacity-30">
                         <div className="flex justify-center">
-                          <p className="text-xl text-teal-800">
+                          <p className="text-xl text-yellow-200">
                             { cards[id].longdescription }
                           </p>
                         </div>
