@@ -57,7 +57,7 @@ export default function Journal(props) {
               
             {status === 'authenticated' &&
               <div className="flex flex-row flex-wrap justify-center text-center">
-                  <div>
+                  <div className="flex flex-row flex-wrap justify-center text-center align-center">
                     {props.readings.map((reading) => (
                       <div className="p-4 m-2 flex flex-row flex-wrap bg-white bg-opacity-90 rounded-xl h-fit" key={reading.id}>
                         <JournalEntry props={reading} />
