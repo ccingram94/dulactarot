@@ -102,12 +102,18 @@ export default function JournalEntry (props) {
               <textarea input="text" label="editingtext" onChange={(e) => {setNewNotes(e.target.value)}} className="p-4 m-2 focus:outline-none text-center">{newnotes}</textarea>
             </div>
             }
-            <div className="flex flex-col justify-center text-center align-center content-center p-2 max-w-xl max-h-128 overflow-y-scroll">
+            <div className="flex flex-col justify-center text-center align-center content-center p-2 max-w-xl">
                   { props.props.result.map( (result) => {
                       return (
                         <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center align-center text-center max-w-lg overflow-auto">
                           <img src={cards[result].image} className="rounded-xl h-40 max-w-fit"/>
                           <h3 className="font-bebas text-lg xl:text-xl p-2 max-w-xs">{cards[result].name}</h3>
+                        </div>
+                      );
+                  })}
+                { props.props.result.map( (result) => {
+                      return (
+                        <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center align-center text-center max-w-lg overflow-auto">
                           <p className="text-xs xl:text-sm">{cards[result].description}</p>
                         </div>
                       );
