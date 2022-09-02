@@ -32,8 +32,8 @@ export default function SearchCards() {
                 return (
                     <div>
                         <Link href={ linkstring }>
-                            <div key={card.id} className="bg-black text-white p-4 m-2 rounded-xl max-w-xs hover:shadow-2xl hover:shadow-yellow-200">
-                                <h3>{card.name}</h3>
+                            <div key={card.id} className="bg-black text-white p-2 m-2 rounded-xl max-w-xs hover:shadow-2xl hover:shadow-yellow-200">
+                                <h3 className="text-sm lg:text-md">{card.name}</h3>
                             </div>
                         </Link>
                     </div>
