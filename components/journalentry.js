@@ -72,27 +72,6 @@ export default function JournalEntry (props) {
     return (
         <div className="flex flex-col flex-wrap justify-center">
             <h2 className="font-bebas text-xl lg:text-2xl text-center p-2">{format(parseJSON(props.props.createdAt), 'PPPP')}</h2>
-            
-            {!editing && <p className="text-center p-2">Notes: {newnotes}</p>}
-            {editing && 
-            <div>
-              <textarea input="text" label="editingtext" onChange={(e) => {setNewNotes(e.target.value)}} className="p-4 m-2 focus:outline-none text-center">{newnotes}</textarea>
-            </div>
-            }
-            {props.props.type == 'yesno' && <h3>✨ Yes or No ✨</h3>}
-            {props.props.type == 'pastpresentfuture' && <h3>✨ Past, Present, Future ✨</h3>}
-            {props.props.type == 'celticcross' && <h3>✨ Celtic Cross ✨</h3>}
-            <div className="flex flex-row flex-wrap justify-center p-2 max-w-2xl">
-                  { props.props.result.map( (result) => {
-                      return (
-                        <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center max-w-lg">
-                            <img src={cards[result].image} className="rounded-xl h-40 max-w-fit"/>
-                          <h3 className="font-bebas text-lg xl:text-xl p-2 max-w-xs">{cards[result].name}</h3>
-                          <p className="text-sm xl:text-md max-w-sm">{cards[result].description}</p>
-                        </div>
-                      );
-                  })}
-            </div>
             <div>
               {!editing && <button onClick={() => setEditing(true)}  className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">edit</button>}
               {editing && <button onClick={() => submitEdit()} className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">submit</button>}
@@ -113,6 +92,26 @@ export default function JournalEntry (props) {
                         <button className="m-2 bg-red-300 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">deleting...</button>
                     </div>
                 }
+            </div>
+            {!editing && <p className="text-center p-2">Notes: {newnotes}</p>}
+            {editing && 
+            <div>
+              <textarea input="text" label="editingtext" onChange={(e) => {setNewNotes(e.target.value)}} className="p-4 m-2 focus:outline-none text-center">{newnotes}</textarea>
+            </div>
+            }
+            {props.props.type == 'yesno' && <h3>✨ Yes or No ✨</h3>}
+            {props.props.type == 'pastpresentfuture' && <h3>✨ Past, Present, Future ✨</h3>}
+            {props.props.type == 'celticcross' && <h3>✨ Celtic Cross ✨</h3>}
+            <div className="flex flex-row flex-wrap justify-center p-2 max-w-2xl">
+                  { props.props.result.map( (result) => {
+                      return (
+                        <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center max-w-lg">
+                            <img src={cards[result].image} className="rounded-xl h-40 max-w-fit"/>
+                          <h3 className="font-bebas text-lg xl:text-xl p-2 max-w-xs">{cards[result].name}</h3>
+                          <p className="text-sm xl:text-md max-w-sm">{cards[result].description}</p>
+                        </div>
+                      );
+                  })}
             </div>
         </div>
     )
