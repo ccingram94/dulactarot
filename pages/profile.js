@@ -20,10 +20,10 @@ export default function Profile() {
       <main className="bg-floral bg-cover min-h-screen text-black font-montserrat flex flex-row justify-center w-screen">
         <div className="bg-yellow-200 min-h-screen bg-opacity-80 w-screen px-12">
           <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">My Profile</h2>
-          <p>signed in as {session?.user?.email}</p>
+          <p className="text-center p-2">signed in as {session.user.email}</p>
           <div className="flex flex-col flex-wrap justify-center text-center">
             <div>
-              <button onClick={() => signOut()} className="p-4 m-2 rounded-xl bg-black text-yellow-200 font-bebas text-xl lg:text-2xl">Sign Out</button>
+              <button onClick={() => signOut()} className="p-2 m-2 rounded-xl bg-black text-yellow-200 font-bebas text-xl lg:text-2xl">Sign Out</button>
             </div>
           </div>
         </div>
