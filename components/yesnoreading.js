@@ -121,7 +121,7 @@ export default function YesNoReading() {
                     }
                   {status === 'authenticated' &&
                     <div>
-                      <textarea type="text" label="notes" placeholder="enter reading notes" onChange={(e) => setNotes(e.target.value)} className="p-2 rounded-xl m-2 justify-center text-center"/>
+                      <textarea type="text" label="notes" placeholder="enter reading notes" onChange={(e) => setNotes(e.target.value)} className="p-2 rounded-xl m-2 justify-center text-center w-full"/>
                     </div>
                   }
                   </div>
