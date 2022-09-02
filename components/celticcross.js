@@ -154,7 +154,7 @@ export default function CelticCrossReading() {
                   </div>
                   <div>
                     {!cardsDealt &&
-                      <p className="font-montserrat text-amber-300 md:text-xl opacity-40 p-6">Reveal your fate.  Click the deck to deal your cards.</p>
+                      <p className="font-montserrat text-amber-300 text-sm lg:text-lg text-center opacity-40 p-6">Reveal your fate.  Click the deck to deal your cards.</p>
                     }
 
                   </div>
@@ -206,7 +206,7 @@ export default function CelticCrossReading() {
                               <h2 className="text-xl p-2 font-bebas text-white text-center">Present</h2>
                               <Image src={ cards[card1].image } width="300" height="500" className="rounded-xl" />
                               <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card1].name}</p>
-                              <p className="text-md p-2 text-yellow-100 text-center"> { cards[card1].description } </p>
+                              <p className="text-sm p-2 text-yellow-100 text-center"> { cards[card1].description } </p>
                             </motion.div>
                           }
                         </div>
@@ -225,7 +225,7 @@ export default function CelticCrossReading() {
                               <Image src={ cards[card2].image } width="300" height="500" className="rounded-xl" />
                               <div>
                                 <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card2].name}</p>
-                                <p className="text-md p-2 text-yellow-100 text-center"> { cards[card2].description } </p>
+                                <p className="text-sm p-2 text-yellow-100 text-center"> { cards[card2].description } </p>
                               </div>
                             </motion.div>
                           }
@@ -234,7 +234,7 @@ export default function CelticCrossReading() {
                           {!card3flip &&
                             <motion.div className="max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
                               <h2 className="text-xl p-2 font-bebas text-white text-center">Past</h2>
-                              <div className="rounded-xl bg-yellow-300 hover:shadow-2xl hover:shadow-yellow-300 transition-all ease-linear">
+                              <div className="rounded-sm bg-yellow-300 hover:shadow-2xl hover:shadow-yellow-300 transition-all ease-linear">
                                 <Image src={back} className="rounded-xl" width="300" height="500"/>
                               </div>
                             </motion.div>
@@ -244,7 +244,7 @@ export default function CelticCrossReading() {
                               <h2 className="text-xl p-2 font-bebas text-white text-center">Past</h2>
                               <Image src={ cards[card3].image } width="300" height="500" className="rounded-xl" />
                               <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card3].name}</p>
-                              <p className="text-md p-2 text-yellow-100 text-center"> { cards[card3].description } </p>
+                              <p className="text-sm p-2 text-yellow-100 text-center"> { cards[card3].description } </p>
                             </motion.div>
                           }
                         </div>
@@ -262,7 +262,7 @@ export default function CelticCrossReading() {
                               <h2 className="text-xl p-2 font-bebas text-white text-center">Future</h2>
                               <Image src={ cards[card4].image } width="300" height="500" className="rounded-xl" />
                               <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card4].name}</p>
-                              <p className="text-md p-2 text-yellow-100 text-center"> { cards[card4].description } </p>
+                              <p className="text-sm p-2 text-yellow-100 text-center"> { cards[card4].description } </p>
                             </motion.div>
                           }
                         </div>
@@ -280,7 +280,7 @@ export default function CelticCrossReading() {
                               <h2 className="text-xl p-2 font-bebas text-white text-center">Conscious Influences</h2>
                               <Image src={ cards[card5].image } width="300" height="500" className="rounded-xl" />
                               <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card5].name}</p>
-                              <p className="text-md p-2 text-yellow-100 text-center"> { cards[card5].description } </p>
+                              <p className="text-sm p-2 text-yellow-100 text-center"> { cards[card5].description } </p>
                             </motion.div>
                           }
                         </div>
@@ -298,7 +298,7 @@ export default function CelticCrossReading() {
                               <h2 className="text-xl p-2 font-bebas text-white text-center">Unconscious Influences</h2>
                               <Image src={ cards[card6].image } width="300" height="500" className="rounded-xl" />
                               <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card6].name}</p>
-                              <p className="text-md p-2 text-yellow-100 text-center"> { cards[card6].description } </p>
+                              <p className="text-sm p-2 text-yellow-100 text-center"> { cards[card6].description } </p>
                             </motion.div>
                           }
                         </div>
@@ -316,7 +316,7 @@ export default function CelticCrossReading() {
                               <h2 className="text-xl p-2 font-bebas text-white text-center">External Influences</h2>
                               <Image src={ cards[card7].image } width="300" height="500" className="rounded-xl" />
                               <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card7].name}</p>
-                              <p className="text-md p-2 text-yellow-100 text-center"> { cards[card7].description } </p>
+                              <p className="text-sm p-2 text-yellow-100 text-center"> { cards[card7].description } </p>
                             </motion.div>
                           }
                         </div>
@@ -334,7 +334,7 @@ export default function CelticCrossReading() {
                               <h2 className="text-xl p-2 font-bebas text-white text-center">Best Case</h2>
                               <Image src={ cards[card8].image } width="300" height="500" className="rounded-xl" />
                               <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card8].name}</p>
-                              <p className="text-md p-2 text-yellow-100 text-center"> { cards[card8].description } </p>
+                              <p className="text-sm p-2 text-yellow-100 text-center"> { cards[card8].description } </p>
                             </motion.div>
                           }
                         </div>
@@ -352,7 +352,7 @@ export default function CelticCrossReading() {
                               <h2 className="text-xl p-2 font-bebas text-white text-center">Worst Case</h2>
                               <Image src={ cards[card9].image } width="300" height="500" className="rounded-xl" />
                               <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card9].name}</p>
-                              <p className="text-md p-2 text-yellow-100 text-center"> { cards[card9].description } </p>
+                              <p className="text-sm p-2 text-yellow-100 text-center"> { cards[card9].description } </p>
                             </motion.div>
                           }
                         </div>
@@ -370,7 +370,7 @@ export default function CelticCrossReading() {
                               <h2 className="text-xl p-2 font-bebas text-white text-center">Outcome</h2>
                               <Image src={ cards[card10].image } width="300" height="500" className="rounded-xl" />
                               <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card10].name}</p>
-                              <p className="text-md p-2 text-yellow-100 text-center"> { cards[card10].description } </p>
+                              <p className="text-sm p-2 text-yellow-100 text-center"> { cards[card10].description } </p>
                             </motion.div>
                           }
                         </div>

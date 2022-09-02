@@ -77,7 +77,7 @@ export default function YesNoReading() {
                   </div>
                   <div>
                     {!cardsDealt &&
-                      <p className="font-montserrat text-amber-300 md:text-xl opacity-40 p-6">Reveal your fate.  Click the deck to deal your cards.</p>
+                      <p className="font-montserrat text-amber-300 text-sm lg:text-lg text-center opacity-40 p-6">Reveal your fate.  Click the deck to deal your cards.</p>
                     }
 
                   </div>
@@ -121,7 +121,7 @@ export default function YesNoReading() {
                     }
                   {status === 'authenticated' &&
                     <div>
-                      <textarea type="text" label="notes" placeholder="enter reading notes" onChange={(e) => setNotes(e.target.value)} className="p-2 rounded-xl m-2 justify-center"/>
+                      <textarea type="text" label="notes" placeholder="enter reading notes" onChange={(e) => setNotes(e.target.value)} className="p-2 rounded-xl m-2 justify-center text-center"/>
                     </div>
                   }
                   </div>
@@ -140,9 +140,9 @@ export default function YesNoReading() {
                                 <div className="flex flex-col justify-center">
                                     <h2 className="text-xl lg:text-3xl p-2 font-bebas text-white text-center">Yes/No</h2>
                                     <Image src={ cards[card1].image } width="300" height="500" className="rounded-xl" />
-                                    <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card1].name}</p>
-                                    <p className="text-md p-2 text-yellow-100 text-center"> { cards[card1].description } </p>
-                                    <p className="text-md p-2 text-yellow-100 text-center">Verdict: { cards[card1].yesno } </p>
+                                    <p className="text-xl p-2 text-white font-bebas text-center lg:text-2xl xl:text-3xl">{ cards[card1].name}</p>
+                                    <p className="text-sm p-2 text-yellow-100 text-center"> { cards[card1].description } </p>
+                                    <p className="text-sm p-2 text-yellow-100 text-center">Verdict: { cards[card1].yesno } </p>
                                 </div>
                             </motion.div>
                           }

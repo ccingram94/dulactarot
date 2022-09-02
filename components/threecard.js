@@ -99,7 +99,7 @@ export default function ThreeCard() {
                   </div>
                   <div>
                     {!cardsDealt &&
-                      <p className="font-montserrat text-amber-300 md:text-xl opacity-40 p-6">Reveal your fate.  Click the deck to deal your cards.</p>
+                      <p className="font-montserrat text-amber-300 text-sm lg:text-lg text-center opacity-40 p-6">Reveal your fate.  Click the deck to deal your cards.</p>
                     }
 
                   </div>
@@ -151,7 +151,7 @@ export default function ThreeCard() {
                               <h2 className="text-xl p-2 font-bebas text-white text-center">Past</h2>
                               <Image src={ cards[card1].image } width="300" height="500" className="rounded-xl" />
                               <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card1].name}</p>
-                              <p className="text-md p-2 text-yellow-100 text-center"> { cards[card1].description } </p>
+                              <p className="text-sm p-2 text-yellow-100 text-center"> { cards[card1].description } </p>
                             </motion.div>
                           }
                         </div>
@@ -170,7 +170,7 @@ export default function ThreeCard() {
                               <Image src={ cards[card2].image } width="300" height="500" className="rounded-xl" />
                               <div>
                                 <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card2].name}</p>
-                                <p className="text-md p-2 text-yellow-100 text-center"> { cards[card2].description } </p>
+                                <p className="text-sm p-2 text-yellow-100 text-center"> { cards[card2].description } </p>
                               </div>
                             </motion.div>
                           }
@@ -189,7 +189,7 @@ export default function ThreeCard() {
                               <h2 className="text-xl p-2 font-bebas text-white text-center">Future</h2>
                               <Image src={ cards[card3].image } width="300" height="500" className="rounded-xl" />
                               <p className="text-xl p-2 text-white font-bebas text-center text-xl lg:text-3xl">{ cards[card3].name}</p>
-                              <p className="text-md p-2 text-yellow-100 text-center"> { cards[card3].description } </p>
+                              <p className="text-sm p-2 text-yellow-100 text-center"> { cards[card3].description } </p>
                             </motion.div>
                           }
                         </div>
