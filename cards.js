@@ -178,7 +178,7 @@ export const cards = [
      },
     {
         id: 22,
-        name: 'Ace of Wands',
+        name: 'The Ace of Wands',
         description: 'New beginnings, creativity, and fertility. It is a positive card that suggests new opportunities and exciting times ahead.',
         longdescription: 'The Ace of Wands is a tarot card that is often associated with new beginnings, creativity, and potential. This card often represents the beginning of a new project or journey. It is a positive card that predicts success and growth in the future. The Ace of Wands can also represent new relationships, new opportunities, and new levels of success. This card can represent the beginning of a new project or venture, and is a reminder that we have the power to create our own destiny.  When this card is reversed, it can represent stagnation, delays, and lack of progress.  When reversed, the Ace of Wands can also represent stagnation, blocked creativity, or a lack of motivation.',
         image: "https://d2lc40okpdverw.cloudfront.net/1wands.png",
@@ -186,7 +186,7 @@ export const cards = [
      },
     {
         id: 23,
-        name: 'Two of Wands',
+        name: 'The Two of Wands',
         description: 'The potential for success and the ability to make your dreams a reality. It is a positive card that suggests that your hard work and determination will pay off in the end. ',
         longdescription: 'When the Two of Wands card appears in a tarot reading, it indicates that the querent is in a period of transition and new beginnings. This is a time of taking risks and exploring new territory, both literally and figuratively. The Two of Wands often signifies a crossroads or fork in the road, where the querent must make an important decision that will affect their future. This card can also represent a change in lifestyle, such as starting a new job or relationship. It is a time of taking bold steps and making big changes. The Two of Wands suggests that the querent has the courage and confidence to forge their own path in life. When the Two of Wands is reversed, it indicates that the querent is feeling indecisive or uncertain about their future. They may be second-guessing themselves or their decisions. This is a time of doubt and self-doubt, where the querent needs to trust their instincts and go with their gut. The Two of Wands can also represent a new business venture or project. It suggests that the querent has the vision and the ambition to make their dreams a reality. This is a time of taking risks and putting everything on the line to achieve success. In a reading, the Two of Wands can indicate that the querent is about to embark on a new journey, both literally and figuratively. They may be moving to a new house or city, or starting a new chapter in their life. This is a time of new beginnings, where anything is possible. The Two of Wands suggests that the querent has the potential to achieve great things.',
         image: "https://d2lc40okpdverw.cloudfront.net/2wands.png",
@@ -194,7 +194,7 @@ export const cards = [
      },
     {
         id: 24,
-        name: 'Three of Wands',
+        name: 'The Three of Wands',
         description: 'Foresight and planning. It suggests that the querent take a moment to consider their options and make a decision about their future. This card can also represent a time of new beginnings, and so it is a good omen for predicting the future.',
         longdescription: 'The Three of Wands tarot card is a card that represents hope, possibility, and potential. It is a card that predicts good things to come in the future, and it is a card that suggests that now is the time to take action and make your dreams a reality. This card can mean different things for different people, but it always signifies that something positive is on the horizon. When The Three of Wands is reversed, it can mean that someone is hesitant to take action or that they are feeling lost and without direction. This is not necessarily a bad thing, as it can simply mean that they need some time to reflect and figure out what they want to do next. However, it can also be a warning sign that someone is about to make a mistake or that they are not ready to face the challenges that lie ahead. No matter what The Three of Wands means for you, it is always a sign that something good is coming your way. So, take heart and have faith in yourself and the future. Things are going to work out – you just have to trust that they will.',
         image: "https://d2lc40okpdverw.cloudfront.net/3wands.png",
@@ -202,7 +202,7 @@ export const cards = [
     },
     {
         id: 25,
-        name: 'Four of Wands',
+        name: 'The Four of Wands',
         description: 'Good things are on the horizon. If you have been working hard towards a goal, the four of wands suggests that your efforts will pay off and you will reap the rewards. This is a time to enjoy your accomplishments and to feel proud of what you have achieved.',
         longdescription: 'In the tarot, the Four of Wands is a card that represents celebration, triumph, and abundance. It is a positive card that predicts good things to come in the future. When this card is reversed, it can mean that there is a lack of harmony in the home or that a celebration is being cut short. This card is all about feeling victorious. It is a celebration of success, whether it be in business, a creative project, or any other area of life. There is a sense of coming together in unity to share in the happiness. Everything is flourishing and there is a feeling of security. This is a time to enjoy the fruits of your labor. The Four of Wands can also indicate a new beginning. It is a time of coming together to start something new. This could be a new relationship, a new job, or a new home. There is a sense of excitement and anticipation for what is to come. Everything is in alignment and you are ready to take the next step. When this card is reversed, it can indicate that there is disharmony in the home. There may be arguments or conflict. This can also be a time when a celebration is cut short. There may be a sense of disappointment or frustration. Everything is not in alignment and you are not feeling victorious.',
         image: "https://d2lc40okpdverw.cloudfront.net/4wands.png",
@@ -210,7 +210,7 @@ export const cards = [
      },
     {
         id: 26,
-        name: 'Five of Wands',
+        name: 'The Five of Wands',
         description: 'Obstacles and challenges.  It suggests that you will have to face some difficulties in your future, but you will be able to overcome them.',
         longdescription: 'In the tarot, the Five of Wands is a card that is associated with change, competition, and conflict. It is a card that suggests that there are forces at work in your life that are beyond your control. This can be a time of upheaval and challenge, but it can also be a time of opportunity and growth. The Five of Wands can be a difficult card to interpret, but it is important to remember that it is not always a negative card. It can represent the challenges we face in life, but it can also represent the potential for triumph. The Five of Wands is a card that is often associated with change. This change can be external, such as a change in your circumstances, or it can be internal, such as a change in your attitude or approach to life. This card can also represent the start of a new chapter in your life. The Five of Wands suggests that there may be some challenges or obstacles in your way, but you have the potential to overcome them. The Five of Wands can also represent competition and conflict. This can be a time when you are competing with others for something, or when you are in conflict with someone. This card suggests that there is some tension or disharmony in your life. However, it is important to remember that this conflict can also be a source of growth. It can be an opportunity to learn and to grow. The Five of Wands can also be a difficult card to interpret. It is important to remember that this card is not always a negative card. It can represent the challenges we face in life, but it can also represent the potential for triumph.',
         image: "https://d2lc40okpdverw.cloudfront.net/5wands.png",
@@ -218,7 +218,7 @@ export const cards = [
        },
     {
         id: 27,
-        name: 'Six of Wands',
+        name: 'The Six of Wands',
         description: 'Victory and success. It suggests that you have the strength and ability to overcome any obstacles in your path, and that you will be victorious in any undertaking.',
         longdescription: 'The Six of Wands is a tarot card that is traditionally associated with victory, triumph, and success. In the life of a person, this card can represent an event or time period in which they have been successful and victorious. This could be something like a promotion at work, winning a competition, or overcoming a difficult situation. In the future, this card predicts more success and triumph for the person.  When someone draws the Six of Wands in a tarot reading, it means that they are about to receive some good news. This could be in the form of a promotion at work, an inheritance, or simply some good luck. This card also predicts that the future is looking bright, and they are likely to achieve success in whatever they set their mind to. When the Six of Wands is reversed, it means that the person is about to receive some bad news. This could be in the form of a layoff at work, a family member getting sick, or some other setback. However, this card also predicts that the person will eventually overcome this obstacle and come out stronger in the end.',
         image: "https://d2lc40okpdverw.cloudfront.net/6wands.png",
@@ -226,7 +226,7 @@ export const cards = [
      },
     {
         id: 28,
-        name: 'Seven of Wands',
+        name: 'The Seven of Wands',
         description: 'Vicotry is near. It is a time to stand your ground and defend what is yours. This card can also suggest that there are still some challenges to be faced before you can claim your prize.',
         longdescription: 'Wands are associated with the element of fire, which makes them natural symbols of energy, enthusiasm, strength, and creativity. The Seven of Wands tarot card is no exception. This card represents someone who is full of energy and passion, and who is ready to take on whatever comes their way. This card can be a positive sign for the future, predicting that the querent will be able to overcome any challenges that come their way. It is also a sign that the querent is in control of their own destiny, and that they have the power to make their dreams a reality. However, the Seven of Wands can also be a negative sign, indicating that the querent may be overconfident and underestimating the challenges they will face. This card can also suggest that the querent is in for a battle, and that they need to be prepared to defend themselves. When this card is reversed, it suggests that the querent may be feeling lost or confused. They may be unsure of which path to take, or they may be facing some kind of adversity. This is not a card that predicts an easy road ahead, but it does suggest that the querent has the strength and determination to overcome whatever challenges they may be facing.',
         image: "https://d2lc40okpdverw.cloudfront.net/7wands.png",
@@ -234,7 +234,7 @@ export const cards = [
     },
     {
         id: 29,
-        name: 'Eight of Wands',
+        name: 'The Eight of Wands',
         description: 'Movement and change.  It suggests that something is about to happen or is already in motion. This change may be positive or negative, but it is likely to be fast and exciting.',
         longdescription: 'The Eight of Wands is a tarot card that represents movement, action, and change. It suggests that you are ready to take on new challenges and venture into new territory. This is a time of new beginnings, of taking risks and exploring new possibilities. The Eight of Wands suggests that you are full of energy and enthusiasm for life. You are ready to take on whatever comes your way. This is a card of progress and forward momentum. It suggests that you are moving in the right direction and that your efforts are bearing fruit. The Eight of Wands suggests that you are on the right track and that you are making good progress. This is a time to stay the course and to keep moving forward. The Eight of Wands suggests that you are nearing your goals and that you are about to achieve success. This is a positive and optimistic card. It suggests that good things are on the horizon. The Eight of Wands suggests that you have the wind at your back and that you are moving in the right direction. This is a time to maintain your focus and to stay positive. The Eight of Wands suggests that you are about to experience a breakthrough. When this card is reversed, it suggests that you are feeling stuck. You may be experiencing delays or roadblocks. This is a time to reevaluate your direction and to make sure that you are still on the right track. The reversed Eight of Wands suggests that you may need to make some adjustments in order to get back on track. This is a time to regroup and to refocus your efforts.',
         image: "https://d2lc40okpdverw.cloudfront.net/8wands.png",
@@ -242,7 +242,7 @@ export const cards = [
      },
     {
         id: 30,
-        name: 'Nine of Wands',
+        name: 'The Nine of Wands',
         description: 'Resilience and tenacity. It suggests that whatever challenges you are facing, you have the strength and determination to overcome them. This card can also indicate that you may need to take a stand and defend yourself or your beliefs. ',
         longdescription: 'The Nine of Wands is a tarot card that is often interpreted to mean strength and determination in the face of adversity. It can also suggest that one has the courage to stand up for what they believe in, even when it is difficult. This card can be a positive sign for the future, predicting that one will overcome whatever challenges they are currently facing. It can also be a warning to be cautious, as the challenges may be greater than anticipated. When reversed, the Nine of Wands suggests that the person may be giving up too easily, or that they are not as prepared as they thought they were.  This card can also indicate that a person is feeling overwhelmed by their current situation.', 
         image: "https://d2lc40okpdverw.cloudfront.net/9wands.png",
@@ -250,7 +250,7 @@ export const cards = [
      },
     {
         id: 31,
-        name: 'Ten of Wands',
+        name: 'The Ten of Wands',
         description: 'Someone is carrying a burden that is too heavy. This may be a physical burden, or it may be an emotional one. Either way, it is important to find a way to lighten your load. This card can also suggest that you are taking on too much responsibility. Try to delegate some of your tasks to others.',
         longdescription: 'The Ten of Wands is the tarot card that represents the heavy burden that one must carry. It is a card that is often seen as a warning sign, as it suggests that the person is not living their best life. The Ten of Wands is a card that suggests that the person is not in a position to make decisions for themselves. They are under a lot of pressure and they are not able to think straight. The Ten of Wands is a card that suggests that the person is at a crossroads in their life and they need to make a decision. The Ten of Wands is a card that is often seen as a negative card, but it can also be seen as a positive card. The Ten of Wands suggests that the person is under a lot of pressure, but they are also able to handle it. They are strong and they are able to take on whatever comes their way.',
         image: "https://d2lc40okpdverw.cloudfront.net/10wands.png",
@@ -258,7 +258,7 @@ export const cards = [
     },
     {
         id: 32,
-        name: 'Page of Wands',
+        name: 'The Page of Wands',
         description: 'New beginnings, excitement and adventure. It is a card that predicts good news and a time of positive change. This is a time to take risks, to follow your dreams and to seize opportunities. The future looks bright and full of potential.',
         longdescription: 'The Page of Wands is a tarot card that is traditionally associated with optimism, inspiration, courage, and new beginnings. The Page of Wands is often seen as a representation of a young person who is full of energy and enthusiasm for life. This card can also represent a new project or venture that is just beginning. When the Page of Wands is reversed, it can represent a lack of motivation, a lack of direction, or a feeling of being stuck.  Usually this card represents new beginnings, creativity, and exploration. This card can predict that the future holds many opportunities for the person it is representing. When the Page of Wands is reversed, it can mean that the person is feeling lost and without direction. However, this card can also represent a person who is full of energy and ready to take on the world.',
         image: "https://d2lc40okpdverw.cloudfront.net/11wands.png",
@@ -266,7 +266,7 @@ export const cards = [
      },
     {
         id: 33,
-        name: 'Knight of Wands',
+        name: 'The Knight of Wands',
         description: 'Good news and great opportunities in the future. This is a time to seize opportunities and make the most of your talents. You will be able to accomplish a lot and achieve success.',
         longdescription: 'When one sees The Knight of Wands tarot card, they can almost feel the heat of the blazing sun upon them. This card represents determination, progress, and initiative. The Knight of Wands is always moving forward and taking action. This card also represents creativity and passion. The Knight of Wands is often seen as a positive omen, predicting success in whatever venture the Seeker is undertaking. When The Knight of Wands is reversed, it can represent recklessness, impulsiveness, and anger. The Knight of Wands reversed can also indicate that the Seeker is going through a period of creative block. This is a time when the Seeker needs to be patient and take a step back in order to move forward again. To the Seeker, The Knight of Wands tarot card can represent taking charge of their own destiny. It is a call to action, to take initiative and make things happen. The Knight of Wands encourages the Seeker to be creative and to follow their passion. This is a time of progress and success. The Knight of Wands reversed can be a warning to the Seeker to be careful of overreaching. This is a time to temper ambition with caution. The Knight of Wands can also indicate that the Seeker is about to embark on a new adventure.',
         image: "https://d2lc40okpdverw.cloudfront.net/12wands.png",
@@ -274,7 +274,7 @@ export const cards = [
     },
     {
         id: 34,
-        name: 'Queen of Wands',
+        name: 'The Queen of Wands',
         description: 'Passion, creativity, and determination. The Queen of Wands is a powerful force that will guide you to your goals. You will be able to achieve anything you set your mind to.',
         longdescription: 'The Queen of Wands is a tarot card that represents a powerful and influential woman. She is a natural leader and is always in control of her emotions. She is confident and has a strong will. She is also kind and compassionate. The Queen of Wands is a positive card and predicts success, happiness, and good fortune. When this card is reversed, it indicates that the person is not in control of their emotions and may be experiencing some problems in their personal life.  The Queen of Wands is a very positive card and predicts success in all areas of your life. She represents a time of happiness, abundance, and fertility. This is a time when you will be able to achieve your goals and reach your full potential. When the Queen of Wands is reversed, it indicates that you are out of balance. You may be feeling scattered, anxious, or depressed. You may be overreacting to situations and overindulging in food, drink, or other pleasures. This is a time when you need to take a step back and regain your composure.',
         image: "https://d2lc40okpdverw.cloudfront.net/13wands.png",
@@ -282,7 +282,7 @@ export const cards = [
      },
     {
         id: 35,
-        name: 'King of Wands',
+        name: 'The King of Wands',
         description: 'Powerful force, representing willpower and determination. When this card appears in a tarot reading, it suggests that the querent has the power to manifest their desires and create their own destiny. This is a positive card that predicts success and good fortune in the future.',
         longdescription: 'The King of Wands represents passion, confidence, and vitality. This card predicts success, enthusiasm, and creativity. When reversed, it suggests that a person may be experiencing difficulties with their self-esteem or may be facing creative blocks. The King of Wands is a powerful and positive force, representing the archetype of the heroic journey. This card encourages us to be confident and to follow our dreams. It reminds us that we are capable of great things and that we should never give up.  This card can predict that a person will have success in their career and their personal life. They will be able to achieve their goals and be prosperous. ',
         image: "https://d2lc40okpdverw.cloudfront.net/14wands.png",

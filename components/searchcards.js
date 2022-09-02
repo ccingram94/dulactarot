@@ -12,10 +12,10 @@ export default function SearchCards() {
   const [ searchTerm, setSearchTerm ] = useState("")
   const [ searchResults, setSearchResults ] = useState([])
   return (
-    <div className="flex flex-col flex-wrap justify-center text-center">
+    <div className="flex flex-col flex-wrap justify-center text-center p-2">
         <section className="text-black p-2">
             <form onChange={(e) => setSearchTerm((e.target.value).toLowerCase())}>
-                <input type="text" placeholder="search cards" className="p-2 rounded-xl" />
+                <input type="text" placeholder="search cards" className="p-2 rounded-xl active:outline-2" />
             </form>
         </section>
         <div>

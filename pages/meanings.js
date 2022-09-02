@@ -29,7 +29,7 @@ export default function Meanings() {
             </Link>
           </div>
         </div>
-        <div className="bg-teal-900">
+        <div className="bg-teal-800">
           <SearchCards />
         </div>
         <AllCardMeanings />
