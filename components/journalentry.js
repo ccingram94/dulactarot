@@ -70,7 +70,7 @@ export default function JournalEntry (props) {
     }
 
     return (
-        <div className="flex flex-col flex-wrap justify-center text-center justify-center items-center align-center max-w-96 overflow-auto">
+        <div className="flex flex-col flex-wrap justify-center text-center justify-center items-center align-center">
             <h2 className="font-bebas text-xl lg:text-2xl text-center p-2">{format(parseJSON(props.props.createdAt), 'PPPP')}</h2>
             <div>
               {!editing && <button onClick={() => setEditing(true)}  className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">edit</button>}
