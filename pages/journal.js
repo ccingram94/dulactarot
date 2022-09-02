@@ -59,7 +59,7 @@ export default function Journal(props) {
               <div className="flex flex-row flex-wrap justify-center text-center">
                   <div className="flex flex-row flex-wrap justify-center text-center">
                     {props.readings.map((reading) => (
-                      <div className="p-4 m-2 flex flex-row flex-wrap bg-white bg-opacity-90 rounded-xl max-h-96 overflow-auto" key={reading.id}>
+                      <div className="p-4 m-2 flex flex-col flex-wrap bg-white bg-opacity-90 rounded-xl max-h-96 overflow-auto" key={reading.id}>
                         <JournalEntry props={reading} />
                       </div>
                     ))}
