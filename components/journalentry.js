@@ -113,7 +113,7 @@ export default function JournalEntry (props) {
                   })}
                 { props.props.result.map( (result) => {
                       return (
-                        <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center align-center text-center max-w-lg overflow-auto">
+                        <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center align-center text-center max-w-lg max-h-96 overflow-y-auto">
                           <p className="text-xs xl:text-sm">{cards[result].description}</p>
                         </div>
                       );
