@@ -19,15 +19,21 @@ export default function Footer() {
           <div className="flex flex-row flex-wrap justify-center justify-items-center max-w-lg p-4 m-2">
             <div className="text-white text-center p-2 lg:p-4">
                 <h4 className="p-4 font-bebas text-xl lg:text-2xl">My Tarot</h4>
-                <p>Profile</p>
-                <p>Journal</p>
-                <p>Subscription</p>
+                <Link href="/profile">
+                  <p>Profile</p>
+                </Link>
+                <Link href="/journal">
+                  <p>Journal</p>
+                </Link>
             </div>
             <div className="text-white text-center p-2 lg:p-4">
                 <h4 className="p-4 font-bebas text-xl lg:text-2xl">Explore</h4>
-                <p>Readings</p>
-                <p>Meanings</p>
-                <p>Blog</p>
+                <Link href="/readings">
+                  <p>Readings</p>
+                </Link>
+                <Link href="/meanings">
+                  <p>Meanings</p>
+                </Link>
             </div>
             <div className="text-white text-center p-2 lg:p-4">
                 <h4 className="p-4 font-bebas text-xl lg:text-2xl">Site</h4>
