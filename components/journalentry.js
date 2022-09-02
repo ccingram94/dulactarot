@@ -105,10 +105,10 @@ export default function JournalEntry (props) {
             <div className="flex flex-row flex-wrap justify-center text-center align-center content-center p-2 max-w-xl">
                   { props.props.result.map( (result) => {
                       return (
-                        <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center align-center text-center max-w-lg">
+                        <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center align-center text-center max-w-lg max-h-96 overflow-auto">
                           <img src={cards[result].image} className="rounded-xl h-40 max-w-fit"/>
                           <h3 className="font-bebas text-lg xl:text-xl p-2 max-w-xs">{cards[result].name}</h3>
-                          <p className="text-sm xl:text-md max-w-sm">{cards[result].description}</p>
+                          <p className="text-xs xl:text-sm max-w-sm">{cards[result].description}</p>
                         </div>
                       );
                   })}
