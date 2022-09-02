@@ -70,7 +70,7 @@ export default function JournalEntry (props) {
     }
 
     return (
-        <div className="flex flex-col flex-wrap justify-center">
+        <div className="flex flex-row flex-wrap justify-center text-center justify-center items-center align-center">
             <h2 className="font-bebas text-xl lg:text-2xl text-center p-2">{format(parseJSON(props.props.createdAt), 'PPPP')}</h2>
             <div>
               {!editing && <button onClick={() => setEditing(true)}  className="p-2 m-2 bg-yellow-200 bg-opacity-20 hover:bg-opacity-80 p-2 rounded-xl transition-all">edit</button>}
@@ -102,11 +102,11 @@ export default function JournalEntry (props) {
             {props.props.type == 'yesno' && <h3>✨ Yes or No ✨</h3>}
             {props.props.type == 'pastpresentfuture' && <h3>✨ Past, Present, Future ✨</h3>}
             {props.props.type == 'celticcross' && <h3>✨ Celtic Cross ✨</h3>}
-            <div className="flex flex-row flex-wrap justify-center p-2 max-w-2xl">
+            <div className="flex flex-row flex-wrap justify-center text-center align-center content-center p-2 max-w-xl">
                   { props.props.result.map( (result) => {
                       return (
-                        <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center max-w-lg">
-                            <img src={cards[result].image} className="rounded-xl h-40 max-w-fit"/>
+                        <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center align-center text-center max-w-lg">
+                          <img src={cards[result].image} className="rounded-xl h-40 max-w-fit"/>
                           <h3 className="font-bebas text-lg xl:text-xl p-2 max-w-xs">{cards[result].name}</h3>
                           <p className="text-sm xl:text-md max-w-sm">{cards[result].description}</p>
                         </div>
