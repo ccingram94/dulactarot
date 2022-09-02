@@ -31,14 +31,23 @@ export default function Footer() {
             </div>
             <div className="text-white text-center p-2 lg:p-4">
                 <h4 className="p-4 font-bebas text-xl lg:text-2xl">Site</h4>
-                <p>About Us</p>
-                
-                <Link href="/privacypolicy">
-                  <button>
-                    <p>Privacy Policy</p>
-                  </button>
-                </Link>
-                <p>Terms of Use</p>
+                <div className="flex flex-col flex-wrap">
+                  <Link href="/aboutus">
+                    <button>
+                      <p>About Us</p>
+                    </button>
+                  </Link>
+                  <Link href="/privacypolicy">
+                    <button>
+                      <p>Privacy Policy</p>
+                    </button>
+                  </Link>
+                  <Link href="/termsofuse">
+                    <button>
+                      <p>Terms of Use</p>
+                    </button>
+                  </Link>
+                </div>
             </div>
           </div>
         </div>
