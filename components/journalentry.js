@@ -70,7 +70,7 @@ export default function JournalEntry (props) {
     }
 
     return (
-        <div className="flex flex-col flex-wrap justify-center text-center max-h-96 overflow-auto">
+        <div className="flex flex-col justify-center text-center max-h-128 overflow-auto">
             <h2 className="font-bebas text-xl lg:text-2xl text-center p-2">{format(parseJSON(props.props.createdAt), 'PPPP')}</h2>
             {props.props.type == 'yesno' && <h3>✨ Yes or No ✨</h3>}
             {props.props.type == 'pastpresentfuture' && <h3>✨ Past, Present, Future ✨</h3>}
