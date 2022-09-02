@@ -100,7 +100,6 @@ export default function YesNoReading() {
                           {saved &&
                           <div>
                             <button onClick={() => saveReading()} className="p-2 rounded-xl text-lg md:text-xl  opacity-40 hover:opacity-90 hover:text-teal-900 hover:bg-white hover:bg-opacity-30 transition-all">Saved! ✨</button>
-                            <button onClick={() => saveReading()} className="p-2 rounded-xl text-lg md:text-xl  opacity-40 hover:opacity-90 hover:text-teal-900 hover:bg-white hover:bg-opacity-30 transition-all">Update</button>
                           </div>
                           }
                         </div>

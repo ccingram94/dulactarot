@@ -37,9 +37,10 @@ export default function CelticCrossReading() {
   const [ card9flip, setCard9Flip ] = useState(false);
   const [ card10flip, setCard10Flip ] = useState(false);
   const [ saved, setSaved ] = useState(false);
+  const [ notes, setNotes ] = useState('');
 
   const submitReading = async() => {
-    const readingresults = [[card1, card2, card3, card4, card5, card6, card7, card8, card9, card10], 'celticcross'];
+    const readingresults = [[card1, card2, card3, card4, card5, card6, card7, card8, card9, card10], 'celticcross', notes];
     try {
       const body = {readingresults};
       await fetch(`/api/post`, {
@@ -190,6 +191,18 @@ export default function CelticCrossReading() {
                       }
                       
                     </div>
+                  </div>
+                  <div className="flex flex-col p-2">
+                  {status != 'authenticated' &&
+                      <div onClick={() => signIn()} className="flex flex-col justify-center">
+                        <p className="opacity-40 rounded-xl bg-white bg-opacity-20 p-2 text-center">log in to save reading notes </p>
+                      </div>
+                    }
+                  {status === 'authenticated' &&
+                    <div>
+                      <textarea type="text" label="notes" placeholder="enter reading notes" onChange={(e) => setNotes(e.target.value)} className="p-2 rounded-xl m-2 justify-center text-center w-full"/>
+                    </div>
+                  }
                   </div>
                   <motion.div className="flex flex-row flex-wrap justify-center h-full max-w-7xl" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
                         <div className="max-w-xs p-12" onClick={ () => setCard1Flip(true) } >

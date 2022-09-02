@@ -21,10 +21,10 @@ export default function ThreeCard() {
   const [ card2flip, setCard2Flip ] = useState(false);
   const [ card3flip, setCard3Flip ] = useState(false);
   const [ saved, setSaved ] = useState(false);
-
+  const [ notes, setNotes ] = useState('');
 
   const submitReading = async() => {
-    const readingresults = [[card1, card2, card3], 'pastpresentfuture'];
+    const readingresults = [[card1, card2, card3], 'pastpresentfuture', notes];
     try {
       const body = {readingresults};
       await fetch(`/api/post`, {
@@ -135,6 +135,18 @@ export default function ThreeCard() {
                       }
                       
                     </div>
+                  </div>
+                  <div className="flex flex-col p-2">
+                  {status != 'authenticated' &&
+                      <div onClick={() => signIn()} className="flex flex-col justify-center">
+                        <p className="opacity-40 rounded-xl bg-white bg-opacity-20 p-2 text-center">log in to save reading notes </p>
+                      </div>
+                    }
+                  {status === 'authenticated' &&
+                    <div>
+                      <textarea type="text" label="notes" placeholder="enter reading notes" onChange={(e) => setNotes(e.target.value)} className="p-2 rounded-xl m-2 justify-center text-center w-full"/>
+                    </div>
+                  }
                   </div>
                   <motion.div className="flex flex-row flex-wrap justify-center min-h-screen" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
                         <div className="max-w-xs p-12" onClick={ () => setCard1Flip(true) } >
