@@ -13,7 +13,11 @@ module.exports = {
       'banner': "url('/banner.png')",
       'floral': "url('/floral.png')",
     },
-    extend: {},
+    extend: {
+      spacing: {
+        '128': '32rem',
+      },
+    },
   },
   plugins: [],
 }
