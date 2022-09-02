@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <div>
         <div className="w-screen bg-teal-900">
-            <p className="p-2 text-xs font-montserrat text-blue-200 text-center"> ✨ free tarot readings to reveal your fate ✨ </p>
+            <p className="p-2 text-xs font-montserrat text-blue-200 text-center"> ⚜ free tarot readings to reveal your fate ⚜ </p>
         </div>
         <div className="flex flex-row flex-wrap w-screen text-center justify-center bg-banner bg-cover bg-bottom">
           <div className="flex flex-col lg:flex-row text-center justify-center items-center w-screen bg-teal-900 bg-opacity-90 lg:pt-6">
@@ -28,7 +28,7 @@ export default function Header() {
             </div>
             <div className="flex lg:w-1/3 justify-center lg:p-4">
               <Link href="/">
-                <h1 className="text-white font-bebas text-2xl lg:text-4xl xl:text-5xl">✨ D u l a c   T a r o t ✨</h1>
+                <h1 className="text-white font-bebas text-2xl lg:text-4xl xl:text-5xl">⚜ D u l a c   T a r o t ⚜</h1>
               </Link>
             </div>
             <div className="flex flex-row lg:w-1/3 max-h-12 justify-center p-2">

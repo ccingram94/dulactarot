@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="flex flex-col flex-wrap w-screen text-center justify-center items-center bg-teal-900 bg-opacity-90">
           <div>
             <Link href="/">
-                <h1 className="pt-12 text-white font-bebas text-xl lg:text-2xl xl:text-3xl">✨ D u l a c   T a r o t ✨</h1>
+                <h1 className="pt-12 text-white font-bebas text-xl lg:text-2xl xl:text-3xl">⚜ D u l a c   T a r o t ⚜ </h1>
             </Link>
           </div>
           <div className="flex flex-row flex-wrap justify-center justify-items-center max-w-lg p-4 m-2">
