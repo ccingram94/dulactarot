@@ -103,6 +103,7 @@ export default function JournalEntry (props) {
               <textarea input="text" label="editingtext" onChange={(e) => {setNewNotes(e.target.value)}} className="p-4 m-2 focus:outline-none text-center">{newnotes}</textarea>
             </div>
             }
+            <button onClick={() => setDetails(true)} className="font-bebas text-lg p-2 m-2 bg-black text-white">Meaning</button>
             <div className="flex flex-row flex-wrap justify-center text-center align-center content-center p-2 max-w-xl">
                   { props.props.result.map( (result) => {
                       return (
@@ -111,7 +112,7 @@ export default function JournalEntry (props) {
                         </div>
                       );
                   })}
-                <button onClick={() => setDetails(true)} className="font-bebas text-lg p-2 m-2 bg-black text-white">Meaning</button>
+                
                 { props.props.result.map( (result) => {
                       return (
                         <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center align-center text-center max-w-lg max-h-96 overflow-y-auto">
