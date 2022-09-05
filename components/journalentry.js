@@ -11,6 +11,7 @@ export default function JournalEntry (props) {
     const [ editing, setEditing ] = useState(false);
     const [ submittingEdit, setSubmittingEdit ] = useState(false);
     const [ edited, setEdited ] = useState(false);
+    const [ details, setDetails ] = useState(false);
     const deleteItem = props.props.id;
 
     
@@ -113,8 +114,13 @@ export default function JournalEntry (props) {
                 { props.props.result.map( (result) => {
                       return (
                         <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center align-center text-center max-w-lg max-h-96 overflow-y-auto">
-                          <h3 className="font-bebas text-lg xl:text-xl p-2 max-w-xs">{cards[result].name}</h3>
-                          <p className="text-xs xl:text-sm">{cards[result].description}</p>
+                          <button onClick={() => setDetails(true)} className="font-bebas text-lg p-2 m-2 bg-black text-white">Meaning</button>
+                          {details &&
+                          <div className="p-2 flex flex-col justify-center items-center align-center text-center max-w-lg">
+                            <h3 className="font-bebas text-lg xl:text-xl p-2 max-w-xs">{cards[result].name}</h3>
+                            <p className="text-xs xl:text-sm">{cards[result].description}</p>
+                          </div>
+                          }
                         </div>
                       );
                   })}
