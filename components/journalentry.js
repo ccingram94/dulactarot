@@ -111,10 +111,10 @@ export default function JournalEntry (props) {
                         </div>
                       );
                   })}
+                <button onClick={() => setDetails(true)} className="font-bebas text-lg p-2 m-2 bg-black text-white">Meaning</button>
                 { props.props.result.map( (result) => {
                       return (
                         <div key={cards[result].id} className="p-2 flex flex-col justify-center items-center align-center text-center max-w-lg max-h-96 overflow-y-auto">
-                          <button onClick={() => setDetails(true)} className="font-bebas text-lg p-2 m-2 bg-black text-white">Meaning</button>
                           {details &&
                           <div className="p-2 flex flex-col justify-center items-center align-center text-center max-w-lg">
                             <h3 className="font-bebas text-lg xl:text-xl p-2 max-w-xs">{cards[result].name}</h3>
