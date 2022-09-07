@@ -48,6 +48,11 @@ export default function Profile() {
             <div>
               <h2>In order to save readings and more, sign in or sign up below</h2>
             </div>
+            <div className="flex flex-col flex-wrap justify-center text-center">
+              <div>
+                <button onClick={() => signIn()} className="p-2 m-2 rounded-xl bg-black text-yellow-200 font-bebas text-xl lg:text-2xl">Sign In</button>
+              </div>
+          </div>
           </div>
         </div>
       </main>
