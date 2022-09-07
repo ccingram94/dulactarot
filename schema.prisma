@@ -44,7 +44,7 @@ model User {
   accounts      Account[]
   sessions      Session[]
   readings      Reading[]
-  savedcards    Int[]
+  savedcards    SavedCard[]
 }
 
 model VerificationToken {
@@ -65,4 +65,12 @@ model Reading {
   published  Boolean    @default(false)
   author     User?       @relation(fields: [authorId], references: [id])
   authorId   String?
+}
+
+model SavedCard {
+  id          Int       @id @default(autoincrement())
+  createdAt   DateTime  @default(now())
+  result      Int       
+  author     User?       @relation(fields: [authorId], references: [id])
+  authorId   String?  
 }
