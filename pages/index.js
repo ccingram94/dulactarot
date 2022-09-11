@@ -4,8 +4,12 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import Hero from '../components/hero'
 import SignUpSection from '../components/signupsection'
+import DailyReadingSection from '../components/dailyreadingsection'
+import { fetchEntries } from '../lib/fetchEntries'
+import DailyHoroscopeEntry from '../components/dailyhoroscopeentry'
 
-export default function Home() {
+export default function Home(props) {
+  console.log(props)
   return (
     <div>
       <Head>
@@ -15,8 +19,18 @@ export default function Home() {
       </Head>
       <main>
         <Hero />
+        <DailyReadingSection props={props} />
         <SignUpSection />
       </main>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const entries = await fetchEntries();
+      return {
+          props: {
+              items: entries.items
+          }
+      }
 }
