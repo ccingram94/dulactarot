@@ -32,9 +32,9 @@ export default function SearchCards() {
                 return (
                     <div>
                         <Link href={ linkstring }>
-                            <div key={card.id} className="bg-black text-white p-2 m-2 rounded-xl max-w-xs hover:shadow-2xl hover:shadow-yellow-200">
+                            <button key={card.id} className="bg-black text-white p-2 m-2 rounded-xl max-w-xs hover:shadow-2xl hover:shadow-yellow-200 hover:text-yellow-200 transition-all">
                                 <h3 className="text-sm lg:text-md">{card.name}</h3>
-                            </div>
+                            </button>
                         </Link>
                     </div>
                 );
