@@ -48,9 +48,9 @@ export default function DailyHoroscope(props) {
                 <h3 className="p-2 font-bold italic">{format(parseJSON(Date.now()), 'PPPP')}</h3>
                 <div className="flex flex-row flex-wrap justify-center text-center">
                     <div className="p-2 m-2 max-w-xl">
-                        <Image src={picture} height={500} width={300} />
+                        <Image src={picture} height={500} width={300} className="rounded-xl"/>
                     </div>
-                    <div className="p-2 m-2 max-w-xl">
+                    <div className="p-2 m-2 max-w-xl flex flex-col align-center justify-center">
                         <p>{description}</p>
                         <button>Learn More</button>
                     </div>
