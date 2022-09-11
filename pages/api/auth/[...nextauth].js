@@ -10,7 +10,6 @@ const config = {
     accessKeyId: process.env.NEXT_AUTH_AWS_ACCESS_KEY,
     secretAccessKey: process.env.NEXT_AUTH_AWS_SECRET_KEY,
   },
-  tableName: 'dulacprod',
   region: 'us-east-1',
 }
 
@@ -35,6 +34,7 @@ export default NextAuth({
   ],
   adapter: DynamoDBAdapter(
     client,
+    {tableName: 'dulacprod'},
   ),
 });
 
