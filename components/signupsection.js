@@ -19,6 +19,7 @@ export default function SignUpSection() {
                 <p className="text-center p-2">sign up for a bewitching free account with benefits like:</p>
                 <p className="text-center p-2">⚜️ Save readings to your journal!</p>
                 <p className="text-center p-2">⚜️ Add notes to your reading results!</p>
+                <p className="text-center p-2">⚜️ A daily tarot horoscope!</p>
                 <div className="flex flex-row flex-wrap justify-center text-center items-center p-2">
                     <button onClick={() => signIn()} className="bg-black text-white max-w-fit p-4 m-2 text-2xl font-bold rounded-xl">SIGN UP</button>
                 </div>
