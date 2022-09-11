@@ -10,25 +10,6 @@ import { format, parseJSON } from 'date-fns'
 import { cards } from '../cards.js'
 import { useSession, signIn } from 'next-auth/react'
 
-export const getServerSideProps = async() => {
-  const session = await getSession();
-  const feed = await prisma.reading.findMany({
-    where: {
-      author: {
-        email: session?.user?.email,
-      },
-    },
-    orderBy: {
-      id: 'desc',
-    },
-  });
-  return {
-    props: {
-      readings: JSON.parse(JSON.stringify(feed))
-    },
-  };
-};
-
 
 export default function Journal(props) {
   const { data: session, status } = useSession();
@@ -79,3 +60,22 @@ export default function Journal(props) {
     )
   
 }
+
+export const getServerSideProps = async() => {
+  const session = await getSession();
+  const feed = await prisma.reading.findMany({
+    where: {
+      author: {
+        email: session?.user?.email,
+      },
+    },
+    orderBy: {
+      id: 'desc',
+    },
+  });
+  return {
+    props: {
+      readings: JSON.parse(JSON.stringify(feed))
+    },
+  };
+};
