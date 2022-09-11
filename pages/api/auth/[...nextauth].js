@@ -1,8 +1,8 @@
-import { DynamoDB } from '@aws-sdk/client-dynamodb'
-import { DynamoDBDocument } from '@aws-sdk/lib-dynamodb'
-import NextAuth from 'next-auth'
-import GoogleProvider from 'next-auth/providers/Google'
-import FacebookProvider from 'next-auth/providers/Facebook'
+import { DynamoDB } from '@aws-sdk/client-dynamodb';
+import { DynamoDBDocument } from '@aws-sdk/lib-dynamodb';
+import NextAuth from 'next-auth';
+import GoogleProvider from "next-auth/providers/google";
+import FacebookProvider from "next-auth/providers/facebook";
 import { DynamoDBAdapter } from '@next-auth/dynamodb-adapter'
 
 const config = {
@@ -10,6 +10,7 @@ const config = {
     accessKeyId: process.env.NEXT_AUTH_AWS_ACCESS_KEY,
     secretAccessKey: process.env.NEXT_AUTH_AWS_SECRET_KEY,
   },
+  tableName: 'dulacprod',
   region: 'us-east-1',
 }
 
@@ -19,18 +20,17 @@ const client = DynamoDBDocument.from(new DynamoDB(config), {
     removeUndefinedValues: true,
     convertClassInstanceToMap: true,
   },
-  tableName: 'dulacprod',
 })
 
 export default NextAuth({
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET
     }),
     FacebookProvider({
       clientId: process.env.FACEBOOK_CLIENT_ID,
-      clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+      clientSecret: process.env.FACEBOOK_CLIENT_SECRET
     }),
   ],
   adapter: DynamoDBAdapter(
