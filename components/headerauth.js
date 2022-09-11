@@ -10,7 +10,7 @@ export default function HeaderAuth() {
         return (
             <div className="flex flex-row lg:w-1/3 justify-center">
                 <Link href="/profile">
-                    <UserIcon className="w-8 lg:w-12 text-yellow-400 opacity-60 p-2 m-2" />
+                    <UserIcon className="w-8 lg:w-12 text-yellow-400 opacity-60" />
                 </Link>
             </div>
         )
@@ -18,7 +18,7 @@ export default function HeaderAuth() {
 
     return (
         <div className="flex flex-row lg:w-1/3 justify-center">
-            <UserIcon className="w-8 lg:w-12 text-yellow-400 opacity-60 p-2 m-2" onClick={() => signIn()}/>
+            <UserIcon className="w-8 lg:w-12 text-yellow-400 opacity-60" onClick={() => signIn()}/>
         </div>
     )
   }

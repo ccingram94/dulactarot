@@ -34,7 +34,7 @@ export default function Header() {
             <div className="flex flex-row lg:w-1/3 max-h-12 justify-center p-2 m-2">
               <HeaderAuth />
               <Link href="/journal">
-                <BookIcon className="w-8 lg:w-12 text-yellow-400 opacity-60 p-2 m-2" />
+                <BookIcon className="w-8 lg:w-12 text-yellow-400 opacity-60" />
               </Link>
             </div>
           </div>
