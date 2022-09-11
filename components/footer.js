@@ -16,7 +16,7 @@ export default function Footer() {
                 <h1 className="pt-12 text-white font-bebas text-xl lg:text-2xl xl:text-3xl">⚜ D u l a c   T a r o t ⚜ </h1>
             </Link>
           </div>
-          <div className="flex flex-row flex-wrap justify-center justify-items-center max-w-lg p-4 m-2">
+          <div className="flex flex-row flex-wrap justify-center justify-items-center max-w-lg p-2">
             <div className="text-white text-center p-2 lg:p-4">
                 <h4 className="p-4 font-bebas text-xl lg:text-2xl">My Tarot</h4>
                 <Link href="/profile">
