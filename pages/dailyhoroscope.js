@@ -10,6 +10,7 @@ import { cards } from '../cards.js'
 import { useSession, signIn } from 'next-auth/react'
 import { fetchEntries } from '../lib/fetchEntries'
 import DailyHoroscopeEntry from '../components/dailyhoroscopeentry'
+import AllHoroscopes from '../components/allhoroscopes'
 
 
 
@@ -39,10 +40,14 @@ export default function DailyHoroscope(props) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className="bg-floral bg-cover min-h-screen text-black font-montserrat w-screen">
-          <div className="bg-yellow-200 min-h-screen bg-opacity-80">
-            <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">Daily Tarot Horoscope</h2>
-            <p className="text-xl text-center pb-6">your future, written in the stars</p>
+          <div className="bg-black min-h-screen bg-opacity-90">
+            <h2 className="text-white text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">Tarot Horoscope</h2>
+            <p className="text-white text-xl text-center pb-6">your future, written in the stars</p>
             <DailyHoroscopeEntry props={props} />
+            <div>
+              <h2 className="text-white text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">Previous Daily Horoscopes</h2>
+              <AllHoroscopes props={props}/>
+            </div>
           </div>
         </main>
       </div>

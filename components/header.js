@@ -22,8 +22,8 @@ export default function Header() {
               <Link href="/readings">
                 <button className="text-2xl p-2">Readings</button>
               </Link>
-              <Link href="/journal">
-                <button className="text-2xl p-2">Journal</button>
+              <Link href="/dailyhoroscope">
+                <button className="text-2xl p-2">Horoscopes</button>
               </Link>
             </div>
             <div className="flex lg:w-1/3 justify-center lg:p-4">
