@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import Header from '../components/header'
 import AllCardMeanings from '../components/allcardmeanings'
 import YourOrders from '../components/yourorders'
@@ -26,6 +27,21 @@ export default function Profile() {
               <button onClick={() => signOut()} className="p-2 m-2 rounded-xl bg-black text-yellow-200 font-bebas text-xl lg:text-2xl">Sign Out</button>
             </div>
           </div>
+        </div>
+        <div>
+          <Link href="/journal">
+            <button className="p-2 m-2 rounded-xl bg-black text-yellow-200 font-bebas text-xl lg:text-2xl">My Journal Entries</button>
+          </Link>          
+        </div>
+        <div>
+          <Link href="/dailyhoroscope">
+            <button className="p-2 m-2 rounded-xl bg-black text-yellow-200 font-bebas text-xl lg:text-2xl">Recent Horoscopes</button>
+          </Link>          
+        </div>        
+        <div>
+          <Link href="/readings">
+            <button className="p-2 m-2 rounded-xl bg-black text-yellow-200 font-bebas text-xl lg:text-2xl">Explore Readings</button>
+          </Link>          
         </div>
       </main>
     </div>
