@@ -5,7 +5,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    domains: ["d2lc40okpdverw.cloudfront.net"],
+    domains: ["d2lc40okpdverw.cloudfront.net", "images.ctfassets.net"],
   },
 }
 
