@@ -26,9 +26,7 @@ export default function Profile() {
             <div>
               <button onClick={() => signOut()} className="p-2 m-2 rounded-xl bg-black text-yellow-200 font-bebas text-xl lg:text-2xl">Sign Out</button>
             </div>
-          </div>
-        </div>
-        <div>
+            <div>
           <Link href="/journal">
             <button className="p-2 m-2 rounded-xl bg-black text-yellow-200 font-bebas text-xl lg:text-2xl">My Journal Entries</button>
           </Link>          
@@ -42,6 +40,8 @@ export default function Profile() {
           <Link href="/readings">
             <button className="p-2 m-2 rounded-xl bg-black text-yellow-200 font-bebas text-xl lg:text-2xl">Explore Readings</button>
           </Link>          
+        </div>
+          </div>
         </div>
       </main>
     </div>
