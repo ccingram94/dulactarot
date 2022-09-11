@@ -34,6 +34,9 @@ export default function Footer() {
                 <Link href="/meanings">
                   <p>Meanings</p>
                 </Link>
+                <Link href="/dailyhoroscope">
+                  <p>Horoscopes</p>
+                </Link>
             </div>
             <div className="text-white text-center p-2 lg:p-4">
                 <h4 className="p-4 font-bebas text-xl lg:text-2xl">Site</h4>
