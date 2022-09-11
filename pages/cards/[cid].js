@@ -55,19 +55,19 @@ export default function CID() {
                 {!id && <p>loading...</p>}
                 {id &&
                 <div>
-                  <div className="">
+                  <div className="p-2 m-2 max-w-lg">
                     <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2">{ cards[id].name }</h2>
-                    <p className="text-xl text-center max-w-xs">{ cards[id].description }</p>
+                    <p className="text-md text-center">{ cards[id].description }</p>
                   </div>
-                  <div>
+                  <div className="p-2 m-2 max-w-lg">
                     <h2 className="text-2xl lg:text-4xl font-bebas text-center p-2 pt-12">Reversed</h2>
-                    <p className="text-xl text-center max-w-xs">{ cards[reverseid].description }</p>
+                    <p className="text-md text-center">{ cards[reverseid].description }</p>
                   </div>
-                  <div>
+                  <div className="p-2 m-2 max-w-lg">
                     <h2 className="text-xl lg:text-2xl font-bebas text-center p-2 pt-12">YES/NO</h2>
-                    <div>
-                      <p className="text-xl text-center max-w-xs">Upright: { cards[id].yesno }</p>
-                      <p className="text-xl text-center max-w-xs">Reversed: { cards[reverseid].yesno }</p>
+                    <div className="p-2 m-2">
+                      <p className="text-xl text-center">Upright: { cards[id].yesno }</p>
+                      <p className="text-xl text-center">Reversed: { cards[reverseid].yesno }</p>
                     </div>
                   </div>
                 </div>
@@ -75,15 +75,15 @@ export default function CID() {
               </div>
             </div>
           </div>
-          <div className="bg-black">
+          <div className="bg-black bg-opacity-80">
             <div className="p-6 flex justify-center">
                   {!id && <p>loading...</p>}
                   {id && 
                     <div className="flex flex-col align-center justify-center">
-                      <h2 className="text-4xl text-yellow-200 lg:text-6xl font-bebas text-center p-2 pt-12">The Meaning of { cards[id].name}</h2>
+                      <h2 className="text-4xl text-yellow-300 lg:text-6xl font-bebas text-center p-2 pt-12">The Meaning of { cards[id].name}</h2>
                       <div className="flex max-w-3xl text-yellow-200 text-center justify-center p-6 pt-12 rounded-xl bg-opacity-30">
                         <div className="flex justify-center">
-                          <p className="text-xl text-yellow-200">
+                          <p className="text-md lg:text-lg text-yellow-200 p-2 m-4">
                             { cards[id].longdescription }
                           </p>
                         </div>

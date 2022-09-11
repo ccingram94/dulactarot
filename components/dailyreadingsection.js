@@ -21,7 +21,9 @@ export default function DailyReadingSection(props) {
                 <h3 className="p-2 font-bold italic text-center">{format(parseJSON(Date.now()), 'PPPP')}</h3>
                 <div className="flex flex-row flex-wrap justify-center text-center p-4 m-4">
                     <div className="p-2 m-2">
-                        <Image src={picture} height={400} width={250} className="rounded-xl"/>
+                        <Link href={link}>
+                            <Image src={picture} height={400} width={250} className="rounded-xl"/>
+                        </Link>
                     </div>
                     <div className="max-w-md p-2 m-2">
                         <h2 className="font-bold p-2 m-2 text-lg lg:text-xl">{today.name}</h2>
