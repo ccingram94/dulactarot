@@ -7,6 +7,7 @@ import SignUpSection from '../components/signupsection'
 import DailyReadingSection from '../components/dailyreadingsection'
 import { fetchEntries } from '../lib/fetchEntries'
 import DailyHoroscopeEntry from '../components/dailyhoroscopeentry'
+import TwitterStream from '../components/twitterstream'
 
 export default function Home(props) {
   console.log(props)
@@ -20,6 +21,7 @@ export default function Home(props) {
       <main>
         <Hero />
         <DailyReadingSection props={props} />
+        <TwitterStream />
         <SignUpSection />
       </main>
     </div>
