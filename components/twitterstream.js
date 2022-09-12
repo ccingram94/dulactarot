@@ -1,11 +1,13 @@
 import axios from 'axios'
 
 
-export default async function TwitterStream() {
+export default function TwitterStream() {
 
-    async function fetchTweets() {
+    const fetchTweets = async() => {
+        console.log('fetching tweets')
         const response = await axios.get('https://api.twitter.com/2/users/by/username/dulactarot')
-        console.log(response)
+            .then((response) => response.json())
+            .then((data) => console.log(data))
     }
 
     return (
