@@ -21,7 +21,6 @@ export default function Home(props) {
       <main>
         <Hero />
         <DailyReadingSection props={props} />
-        <TwitterStream />
         <SignUpSection />
       </main>
     </div>
