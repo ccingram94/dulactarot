@@ -20,7 +20,7 @@ export default function Profile() {
       </Head>
       <main className="bg-floral bg-cover min-h-screen text-black font-montserrat flex flex-row justify-center w-screen">
         <div className="bg-yellow-200 min-h-screen bg-opacity-80 w-screen px-12">
-          {session.user.image && <Image src={session?.user?.image} height={200} width={200} className="rounded-xl" />}
+          <Image src={session?.user?.image} height={200} width={200} className="rounded-xl" />
           <h2 className="text-4xl lg:text-6xl font-bebas text-center p-2 pt-12">My Profile</h2>
           <p className="text-center p-2">currently signed in!</p>
           <div className="flex flex-col flex-wrap justify-center text-center">
