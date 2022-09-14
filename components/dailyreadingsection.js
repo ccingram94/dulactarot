@@ -30,7 +30,12 @@ export default function DailyReadingSection(props) {
                         <p className="text-sm lg:text-md p-2 m-2 text-justify">{today.description}</p>
                         <div className="flex flex-row flex-wrap justify-center text-center items-center p-2">
                             <Link href={link}>
-                                <button onClick={() => showProps()} className="bg-black text-white max-w-fit p-4 m-2 text-2xl font-bold rounded-xl">Learn More</button>
+                                <button className="bg-black text-white max-w-fit p-4 m-2 text-2xl font-bold rounded-xl">Learn More</button>
+                            </Link>
+                        </div>
+                        <div className="flex flex-row flex-wrap justify-center text-center items-center p-2">
+                            <Link href="/dailyhoroscope">
+                                <button className="bg-black text-white max-w-fit p-4 m-2 text-2xl font-bold rounded-xl">See All Horoscopes</button>
                             </Link>
                         </div>
                     </div>
