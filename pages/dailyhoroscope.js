@@ -52,7 +52,7 @@ export default function DailyHoroscope(props) {
   
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const entries = await fetchEntries();
         return {
             props: {
