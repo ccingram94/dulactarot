@@ -21,9 +21,6 @@ export default function DailyHoroscope(props) {
   
   const horoscopearray = [props.items]
 
-
-
-
   useEffect(() => {
     setLoading(true);
     if (props != null) {
