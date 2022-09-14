@@ -27,7 +27,7 @@ export default function Home(props) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const entries = await fetchEntries();
       return {
           props: {
