@@ -247,7 +247,7 @@ export default function CelticCrossReading() {
                           {!card3flip &&
                             <motion.div className="max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ staggerChildren: 0.5, duration: 1.0, delay: 0.3}}>
                               <h2 className="text-xl p-2 font-bebas text-white text-center">Past</h2>
-                              <div className="rounded-sm bg-yellow-300 hover:shadow-2xl hover:shadow-yellow-300 transition-all ease-linear">
+                              <div className="rounded-xl bg-yellow-300 hover:shadow-2xl hover:shadow-yellow-300 transition-all ease-linear">
                                 <Image src={back} className="rounded-xl" width="300" height="500"/>
                               </div>
                             </motion.div>
